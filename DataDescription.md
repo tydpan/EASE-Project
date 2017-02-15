@@ -15,26 +15,21 @@ Financial Part:
 **For conventional energy (coal/petroleum/natural gas)**
 
 l  Main cost of generators (including installation, operation & maintenance)
-
-l  Cost of fuel
+2  Cost of fuel
 
 **For clean energy (solar/wind/hydro)**
 
 l  Solar (including main cost, tax,  per year: 2007-2015/per state/)
-
-l  Wind (including average main cost of a specific state)
-
-l  Hydro (including average main cost of a specific state)
+2  Wind (including average main cost of a specific state)
+3  Hydro (including average main cost of a specific state)
 
 
 
 [**2  Revenue**]
 
 l  Numbers of customers 
-
-l  Electricity Prices
-
-l  Revenue
+2  Electricity Prices
+3  Revenue
 
 
 
@@ -42,9 +37,7 @@ l  Revenue
 
 Columns: Year, Type, CO2_Emission, Wind, Temperature, Precipitation, Main_Cost, Revenue, State, Zipcode
 
-60% data for training ramdom forest model;
-
+60% data for training random forest model;
 20% data for testing;
-
 20% data for validating
 
