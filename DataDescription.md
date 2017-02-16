@@ -1,12 +1,23 @@
-CO2 emission
-Size - rows (50) x column (35) (1980-2014)
-subcolumns are type of sources produce CO2 (3)
-demensionalities are States, years, and type of sources generate CO2
-rows are states, columns are years, and subcolumns are types including coal, petroleum products, and natural gas
-
-
 
 **Data Sets:**
+
+*CO2 emission*
+
+Size - use years from 1990 to 2015
+
+subcolumns are type of sources produce CO2 (3)
+
+demensionalities are States, years, and type of sources generate CO2
+
+rows are years, columns are states, and subcolumns are types including coal, petroleum products, and natural gas
+
+*Weather*
+
+size - use years from 1996 to 2015
+
+For weather dataset, dimensionalities are states, year, wind speed, temperature, and precipitation
+
+rows are year, columns are states, wind speed, temperature, and precipitation.
 
 Financial Part:
 
