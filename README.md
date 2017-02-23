@@ -33,6 +33,7 @@ Database Sources
     * Cost of Conventional Source [http://www.eia.gov/electricity/data/browser/#/topic/15?agg=1,0,2&fuel=8&geo=vvvvvvvvvvvvo&sec=80o&linechart=ELEC.COST_BTU.COW-US-98.M&columnchart=ELEC.COST_BTU.COW-US-98.M&map=ELEC.COST_BTU.COW-US-98.M&freq=M&start=200801&end=201611&ctype=linechart&ltype=pin&rtype=s&maptype=0&rse=0&pin=](http://www.eia.gov/electricity/data/browser/#/topic/15?agg=1,0,2&fuel=8&geo=vvvvvvvvvvvvo&sec=80o&linechart=ELEC.COST_BTU.COW-US-98.M&columnchart=ELEC.COST_BTU.COW-US-98.M&map=ELEC.COST_BTU.COW-US-98.M&freq=M&start=200801&end=201611&ctype=linechart&ltype=pin&rtype=s&maptype=0&rse=0&pin=)
     * Cost of Solar Resource [https://openpv.nrel.gov/search](https://openpv.nrel.gov/search)
     * Cost of Wind Resource [https://emp.lbl.gov/projects/wind](https://emp.lbl.gov/projects/wind)
+    
 -----------------------
 Software Depedencies
 -----------------------
