@@ -34,11 +34,12 @@ Database Sources
 -----------------------
 Software Depedencies
 -----------------------
-**Package is written in Python 3.x version**
+**Package is written in Python 3.x version**</p>
 **All the required software is open source.**
 
-Numpy  [http://www.numpy.org/](http://www.numpy.org/)
+Numpy  [http://www.numpy.org/](http://www.numpy.org/)</p>
 Pandas  [http://pandas.pydata.org/](http://pandas.pydata.org/)
+
 Scikit-Learn  [http://scikit-learn.org/stable/](http://scikit-learn.org/stable/)
 
 **Operating system information**
@@ -52,7 +53,7 @@ Folders
 
 **Original_Data** - The folder contains the orginal datasets downloaded from all the open sources stated above, these raw dataset contains information that are not useful for the package development.
 
-**Arrange_Data** - The folder contains the iPython scripts that import and clean different original raw dataset from the **Original-Data** folder. 
+**Arrange_Data** - The folder contains the iPython scripts that import and clean different original raw dataset from the **Original_Data** folder. 
 
 **Model** - The code for the model, EASE_v1.0, and all other scripts for the model development.
 
