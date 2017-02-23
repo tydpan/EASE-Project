@@ -7,7 +7,7 @@ EASE is classification model that predicts best electricity generation source fr
 Please give credits for the contributors if you use this code.
 
 ##### EASE_RF_v1.0
-<sup>**</sup>Jiarong I. Cui(1)<sup>**</sup>, <sup>**</sup>Tai-Yu D. Pan(1)<sup>**</sup>, J<sup>**</sup>iayuan Guo(1)<sup>**</sup>, <sup>**</sup>Yongquan Xie(2)<sup>**</sup>
+<sup>**</sup>Jiarong I. Cui<sup>**</sup>(1), <sup>**</sup>Tai-Yu D. Pan<sup>**</sup>(1), J<sup>**</sup>iayuan Guo<sup>**</sup>(1), <sup>**</sup>Yongquan Xie<sup>**</sup>(2)
 
 (1) University of Washington, Department of Chemical Engineering, Seattle, WA </br>
 (2) University of Washington, Department of Material Science and Engineering, Seattle, WA
