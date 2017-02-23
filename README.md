@@ -1,7 +1,20 @@
-# EASE-Project
-Electricity Analysis Suggestion Ensemble, or short for EASE, is a DIRECT Project aiming to produce a  predictive model in suggesting users what is the best electricity generation type based on inputs. This model will take location/weather data, cost data, and CO2 emission/taxation data into consideration and used ML(RandomTrees or Decision Trees) to predict optimal results.
+# EASE-Project_v1.0
+====
+Electricity Analysis Suggestion Ensemble, or short for EASE, is a Proejct guided by the eScience Insititue and Chemical Engineering Department at the University of Washington. 
+
+EASE is classification model that predicts best electricity generation source from weather, cost, carbon dioxide emission/taxation, and energy source distribution data at a specific user input location within the states. The output of the model is an optimized suggestion with most economical, best weather suitable, clean, and most efficient. EASE project  utilized Machine Learning (RamdomForest) algorithem from scikit-learn to do classificiation.
+
+Please give credits for the contributors if you use this code.
+
+##### EASE_RF_v1.0
+Jiarong I. Cui<sup>*</sup>, Tai-Yu D. Pan<sup>*</sup>, Jiayuan Guo<sup>*</sup>, Yongquan Xie<sup>**</sup>
+
+<sup>*</sup>University of Washington, Department of Chemical Engineering, Seattle, WA</p>
+<sup>**</sup>University of Washington, Department of Material Science and Engineering, Seattle, WA
+
 
 # License
 No License has been created just yet. 
 
 
+asdfsdf
