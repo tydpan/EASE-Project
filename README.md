@@ -38,8 +38,7 @@ Software Depedencies
 **All the required software is open source.**
 
 Numpy  [http://www.numpy.org/](http://www.numpy.org/)</p>
-Pandas  [http://pandas.pydata.org/](http://pandas.pydata.org/)
-
+Pandas  [http://pandas.pydata.org/](http://pandas.pydata.org/)</p>
 Scikit-Learn  [http://scikit-learn.org/stable/](http://scikit-learn.org/stable/)
 
 **Operating system information**
