@@ -59,6 +59,6 @@ Columns: Year, Type, CO2_Emission, Wind, Temperature, Precipitation, Main_Cost, 
 
 20% data for validating
 
-![alt tag](https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/initial%20matrix.png)
+![alt tag](https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/initial%20matrix.png)
 
 
