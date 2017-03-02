@@ -1,4 +1,11 @@
 def RF(prec, ts, tw, ws):
+    """
+    This function is RandomForest classifier to intake user input temperature, precipitation, and windespeed to classify the possible states the user will be in, and returns a
+    dictionary with states as the keys and the frequency or count as the values of each key.
+
+       input = user input values, integer or float based.
+       vote = dictionary based output that contains the RF classified states, and each states frequency.
+       """
     import pandas as pd
     from sklearn.ensemble import RandomForestClassifier
     import itertools as it
