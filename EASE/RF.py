@@ -11,7 +11,7 @@ def RF(prec, ts, tw, ws):
     import itertools as it
     import warnings
 
-    train = pd.read_csv('Arranged_Data/final_weater.csv')[[
+    train = pd.read_csv('../Arranged_Data/final_weater.csv')[[
             'State', 'TotalMonthlyPrecip', 'TempSummer', 
             'TempWinter', 'Avgwindspeed']]
     
