@@ -1,4 +1,4 @@
-YYMM,States,Coal,NG,Petroleum
+YYMM,State,Coal,NG,Petroleum
 200801,CT,--,13.63,21.77
 200801,ME,--,--,18.15
 200801,MA,--,11.66,17.75
@@ -21,7 +21,6 @@ YYMM,States,Coal,NG,Petroleum
 200801,ND,1.01,8.81,19.54
 200801,SD,1.68,5.8,22.09
 200801,DE,--,10.33,18.45
-200801,District Of Columbia : electric utility,--,--,--
 200801,FL,2.66,9.31,9.79
 200801,GA,2.69,9.45,20.56
 200801,MD,--,0,16.28
@@ -72,7 +71,6 @@ YYMM,States,Coal,NG,Petroleum
 200802,ND,1.02,8.23,20.92
 200802,SD,1.64,5.81,20.51
 200802,DE,--,10.41,19.46
-200802,District Of Columbia : electric utility,--,--,--
 200802,FL,2.61,9.56,9.02
 200802,GA,2.73,9.61,19.44
 200802,MD,--,0,16.97
@@ -123,7 +121,6 @@ YYMM,States,Coal,NG,Petroleum
 200803,ND,1.14,11.86,23.74
 200803,SD,1.67,6.22,23.5
 200803,DE,--,10.3,19.52
-200803,District Of Columbia : electric utility,--,--,--
 200803,FL,2.62,9.91,12.9
 200803,GA,2.81,14.46,14.44
 200803,MD,--,0,16.98
@@ -174,7 +171,6 @@ YYMM,States,Coal,NG,Petroleum
 200804,ND,1.17,9.78,25.6
 200804,SD,1.68,4.13,25.3
 200804,DE,--,11.05,22.7
-200804,District Of Columbia : electric utility,--,--,--
 200804,FL,2.63,10.08,12.32
 200804,GA,2.89,11.36,15.75
 200804,MD,--,0,18.68
@@ -225,7 +221,6 @@ YYMM,States,Coal,NG,Petroleum
 200805,ND,1.15,9.66,28.73
 200805,SD,1.79,4.34,30.13
 200805,DE,--,11.98,25.67
-200805,District Of Columbia : electric utility,--,--,--
 200805,FL,2.84,10.88,14.08
 200805,GA,2.96,12.52,16.54
 200805,MD,--,0,25.04
@@ -276,7 +271,6 @@ YYMM,States,Coal,NG,Petroleum
 200806,ND,1.11,14.5,29.3
 200806,SD,1.8,7.93,30.22
 200806,DE,--,13.07,25.2
-200806,District Of Columbia : electric utility,--,--,--
 200806,FL,2.96,11.64,15.29
 200806,GA,3.16,13.43,16.22
 200806,MD,--,0,23.44
@@ -327,7 +321,6 @@ YYMM,States,Coal,NG,Petroleum
 200807,ND,1.05,12.36,27.73
 200807,SD,1.78,8.2,29.09
 200807,DE,--,12.63,25.59
-200807,District Of Columbia : electric utility,--,--,--
 200807,FL,3.12,11.59,17.67
 200807,GA,2.99,11.75,15.36
 200807,MD,--,0,22.8
@@ -378,7 +371,6 @@ YYMM,States,Coal,NG,Petroleum
 200808,ND,1.06,8.4,25.74
 200808,SD,1.83,6.59,27.16
 200808,DE,--,9.92,22.59
-200808,District Of Columbia : electric utility,--,--,--
 200808,FL,3.04,10.25,16.37
 200808,GA,3.41,9.15,19.54
 200808,MD,--,0,20.74
@@ -429,7 +421,6 @@ YYMM,States,Coal,NG,Petroleum
 200809,ND,1.11,8.8,25.05
 200809,SD,1.8,4.95,25.7
 200809,DE,--,8.57,20.2
-200809,District Of Columbia : electric utility,--,--,--
 200809,FL,3.03,10.65,14.85
 200809,GA,3.15,8.35,18.82
 200809,MD,--,0,19.04
@@ -480,7 +471,6 @@ YYMM,States,Coal,NG,Petroleum
 200810,ND,1.02,6.29,18.56
 200810,SD,1.81,3.6,20.82
 200810,DE,--,7.08,18.87
-200810,District Of Columbia : electric utility,--,--,--
 200810,FL,3.07,9.27,12.46
 200810,GA,3.23,7.26,29.8
 200810,MD,--,0,16.57
@@ -531,7 +521,6 @@ YYMM,States,Coal,NG,Petroleum
 200811,ND,1.15,6.34,15.81
 200811,SD,1.63,6.14,17.02
 200811,DE,--,6.96,17.06
-200811,District Of Columbia : electric utility,--,--,--
 200811,FL,3.08,9.41,8.1
 200811,GA,3.25,7.42,11.3
 200811,MD,--,0,14.94
@@ -582,7 +571,6 @@ YYMM,States,Coal,NG,Petroleum
 200812,ND,0.99,6.87,14.69
 200812,SD,1.76,6.38,13.7
 200812,DE,--,8.1,12.36
-200812,District Of Columbia : electric utility,--,--,--
 200812,FL,3.06,9.65,5.83
 200812,GA,3.15,7.12,14.89
 200812,MD,--,0,9.97
@@ -633,7 +621,6 @@ YYMM,States,Coal,NG,Petroleum
 200901,ND,1.02,NM,11.43
 200901,SD,1.83,9.34,11.45
 200901,DE,--,NM,NM
-200901,District Of Columbia : electric utility,--,--,--
 200901,FL,3.34,9.52,6.22
 200901,GA,3.41,6.09,11.37
 200901,MD,--,0,NM
@@ -684,7 +671,6 @@ YYMM,States,Coal,NG,Petroleum
 200902,ND,1.03,NM,10.16
 200902,SD,1.8,NM,NM
 200902,DE,--,NM,0
-200902,District Of Columbia : electric utility,--,--,--
 200902,FL,3.34,9.39,8.35
 200902,GA,3.49,5.13,9.7
 200902,MD,--,0,NM
@@ -735,7 +721,6 @@ YYMM,States,Coal,NG,Petroleum
 200903,ND,1.03,NM,10.83
 200903,SD,1.81,10.33,NM
 200903,DE,--,NM,0
-200903,District Of Columbia : electric utility,--,--,--
 200903,FL,3.33,8.63,8.23
 200903,GA,3.5,4.45,9.75
 200903,MD,--,0,NM
@@ -786,7 +771,6 @@ YYMM,States,Coal,NG,Petroleum
 200904,ND,1.11,NM,11.19
 200904,SD,1.52,7.47,NM
 200904,DE,--,NM,0
-200904,District Of Columbia : electric utility,--,--,--
 200904,FL,3.24,7.97,8.88
 200904,GA,3.52,4.04,11.02
 200904,MD,--,0,NM
@@ -837,7 +821,6 @@ YYMM,States,Coal,NG,Petroleum
 200905,ND,1.13,NM,12.39
 200905,SD,1.86,8.72,12.04
 200905,DE,--,NM,0
-200905,District Of Columbia : electric utility,--,--,--
 200905,FL,3.49,7.81,9.38
 200905,GA,3.58,4.34,9.93
 200905,MD,--,0,NM
@@ -888,7 +871,6 @@ YYMM,States,Coal,NG,Petroleum
 200906,ND,1.19,NM,14.59
 200906,SD,1.73,4.46,NM
 200906,DE,--,NM,0
-200906,District Of Columbia : electric utility,--,--,--
 200906,FL,3.52,7.65,10.04
 200906,GA,3.59,4.33,14.34
 200906,MD,--,0,NM
@@ -939,7 +921,6 @@ YYMM,States,Coal,NG,Petroleum
 200907,ND,1.09,NM,13.55
 200907,SD,1.71,NM,NM
 200907,DE,--,NM,0
-200907,District Of Columbia : electric utility,--,--,--
 200907,FL,3.48,7.56,10.81
 200907,GA,3.68,3.91,14.22
 200907,MD,--,0,NM
@@ -990,7 +971,6 @@ YYMM,States,Coal,NG,Petroleum
 200908,ND,1.07,NM,14.96
 200908,SD,1.75,4.54,NM
 200908,DE,--,NM,0
-200908,District Of Columbia : electric utility,--,--,--
 200908,FL,3.29,7.58,11.57
 200908,GA,3.8,3.7,12.65
 200908,MD,--,0,NM
@@ -1041,7 +1021,6 @@ YYMM,States,Coal,NG,Petroleum
 200909,ND,1.34,NM,13.89
 200909,SD,1.75,3.93,NM
 200909,DE,--,NM,0
-200909,District Of Columbia : electric utility,--,--,--
 200909,FL,3.42,7.1,12.87
 200909,GA,3.72,3.45,14.6
 200909,MD,--,0,NM
@@ -1092,7 +1071,6 @@ YYMM,States,Coal,NG,Petroleum
 200910,ND,1.3,NM,15.67
 200910,SD,1.76,3.95,NM
 200910,DE,--,NM,0
-200910,District Of Columbia : electric utility,--,--,--
 200910,FL,3.23,7.57,11.76
 200910,GA,3.71,4.59,13.85
 200910,MD,--,0,NM
@@ -1143,7 +1121,6 @@ YYMM,States,Coal,NG,Petroleum
 200911,ND,1.27,NM,15.49
 200911,SD,1.69,4.79,NM
 200911,DE,--,NM,0
-200911,District Of Columbia : electric utility,--,--,--
 200911,FL,3.43,7.69,12.35
 200911,GA,3.62,4.09,15.17
 200911,MD,--,0,NM
@@ -1194,7 +1171,6 @@ YYMM,States,Coal,NG,Petroleum
 200912,ND,1.14,NM,15.85
 200912,SD,1.85,5.78,NM
 200912,DE,--,NM,0
-200912,District Of Columbia : electric utility,--,--,--
 200912,FL,3.27,8.53,10.66
 200912,GA,3.67,5.78,15.86
 200912,MD,--,0,NM
@@ -1245,7 +1221,6 @@ YYMM,States,Coal,NG,Petroleum
 201001,ND,1.17,NM,15.61
 201001,SD,1.95,NM,NM
 201001,DE,--,NM,NM
-201001,District Of Columbia : electric utility,--,--,--
 201001,FL,3.42,7.73,12.65
 201001,GA,3.64,6.87,16.35
 201001,MD,--,0,NM
@@ -1296,7 +1271,6 @@ YYMM,States,Coal,NG,Petroleum
 201002,ND,1.18,NM,15.29
 201002,SD,1.94,NM,NM
 201002,DE,--,NM,NM
-201002,District Of Columbia : electric utility,--,--,--
 201002,FL,3.52,7.1,12.75
 201002,GA,3.96,5.89,15.08
 201002,MD,--,0,NM
@@ -1347,7 +1321,6 @@ YYMM,States,Coal,NG,Petroleum
 201003,ND,1.25,NM,17.19
 201003,SD,1.99,NM,NM
 201003,DE,--,NM,NM
-201003,District Of Columbia : electric utility,--,--,--
 201003,FL,3.68,6.64,14.63
 201003,GA,3.97,4.72,18.66
 201003,MD,--,0,NM
@@ -1398,7 +1371,6 @@ YYMM,States,Coal,NG,Petroleum
 201004,ND,1.32,NM,18.58
 201004,SD,1.97,7.55,NM
 201004,DE,--,NM,NM
-201004,District Of Columbia : electric utility,--,--,--
 201004,FL,3.48,6.26,14.41
 201004,GA,3.91,4.55,16.92
 201004,MD,--,0,NM
@@ -1449,7 +1421,6 @@ YYMM,States,Coal,NG,Petroleum
 201005,ND,1.36,NM,17.14
 201005,SD,1.97,6.31,NM
 201005,DE,--,4.91,NM
-201005,District Of Columbia : electric utility,--,--,--
 201005,FL,3.45,6.19,12.16
 201005,GA,3.96,4.76,16.25
 201005,MD,--,0,NM
@@ -1500,7 +1471,6 @@ YYMM,States,Coal,NG,Petroleum
 201006,ND,1.2,NM,16.35
 201006,SD,2.07,NM,NM
 201006,DE,--,NM,NM
-201006,District Of Columbia : electric utility,--,--,--
 201006,FL,3.54,6.38,11.49
 201006,GA,4,5.17,16.67
 201006,MD,--,0,NM
@@ -1551,7 +1521,6 @@ YYMM,States,Coal,NG,Petroleum
 201007,ND,1.19,NM,16.41
 201007,SD,1.93,5.48,NM
 201007,DE,--,5.28,NM
-201007,District Of Columbia : electric utility,--,--,--
 201007,FL,3.46,6.66,11.8
 201007,GA,3.95,5.08,16.23
 201007,MD,--,0,NM
@@ -1602,7 +1571,6 @@ YYMM,States,Coal,NG,Petroleum
 201008,ND,1.17,NM,16.43
 201008,SD,1.85,5.25,NM
 201008,DE,--,5.06,NM
-201008,District Of Columbia : electric utility,--,--,--
 201008,FL,3.46,6.71,12.01
 201008,GA,3.92,4.7,15.67
 201008,MD,--,0,NM
@@ -1653,7 +1621,6 @@ YYMM,States,Coal,NG,Petroleum
 201009,ND,1.27,NM,17.78
 201009,SD,1.83,6.17,NM
 201009,DE,--,NM,NM
-201009,District Of Columbia : electric utility,--,--,--
 201009,FL,3.33,6.04,12.05
 201009,GA,3.86,4.43,16.84
 201009,MD,--,0,NM
@@ -1704,7 +1671,6 @@ YYMM,States,Coal,NG,Petroleum
 201010,ND,1.25,NM,19.14
 201010,SD,1.88,5.05,NM
 201010,DE,--,NM,NM
-201010,District Of Columbia : electric utility,--,--,--
 201010,FL,3.34,6.09,14.88
 201010,GA,4.01,4.21,17.93
 201010,MD,--,0,NM
@@ -1755,7 +1721,6 @@ YYMM,States,Coal,NG,Petroleum
 201011,ND,1.25,NM,19.12
 201011,SD,1.93,6.23,NM
 201011,DE,--,NM,NM
-201011,District Of Columbia : electric utility,--,--,--
 201011,FL,3.28,5.95,15.15
 201011,GA,3.96,4.21,18.6
 201011,MD,--,0,NM
@@ -1806,7 +1771,6 @@ YYMM,States,Coal,NG,Petroleum
 201012,ND,1.45,NM,19.32
 201012,SD,2.07,6.85,18.91
 201012,DE,--,NM,NM
-201012,District Of Columbia : electric utility,--,--,--
 201012,FL,3.43,6.67,16.74
 201012,GA,3.71,4.72,18.94
 201012,MD,--,0,NM
@@ -1857,7 +1821,6 @@ YYMM,States,Coal,NG,Petroleum
 201101,ND,1.26,0,NM
 201101,SD,2.17,5.25,NM
 201101,DE,--,NM,NM
-201101,District Of Columbia : electric utility,--,NM,--
 201101,FL,3.54,6.08,14.54
 201101,GA,3.8,5.27,20.55
 201101,MD,--,0,NM
@@ -1908,7 +1871,6 @@ YYMM,States,Coal,NG,Petroleum
 201102,ND,1.27,0,21.38
 201102,SD,2.13,6.45,NM
 201102,DE,--,NM,NM
-201102,District Of Columbia : electric utility,--,NM,--
 201102,FL,3.46,5.97,20.44
 201102,GA,3.91,4.57,21.91
 201102,MD,--,0,NM
@@ -1959,7 +1921,6 @@ YYMM,States,Coal,NG,Petroleum
 201103,ND,1.25,0,24.45
 201103,SD,2.09,5.83,NM
 201103,DE,--,NM,NM
-201103,District Of Columbia : electric utility,--,4.73,--
 201103,FL,3.5,5.64,19.25
 201103,GA,3.71,4.34,23.48
 201103,MD,--,0,NM
@@ -2010,7 +1971,6 @@ YYMM,States,Coal,NG,Petroleum
 201104,ND,1.4,8.04,25.37
 201104,SD,2.09,6.38,25.91
 201104,DE,--,NM,NM
-201104,District Of Columbia : electric utility,--,4.89,--
 201104,FL,3.72,5.9,18.35
 201104,GA,3.6,4.65,23.89
 201104,MD,--,0,NM
@@ -2061,7 +2021,6 @@ YYMM,States,Coal,NG,Petroleum
 201105,ND,1.43,8.63,24.43
 201105,SD,2.08,8.19,NM
 201105,DE,--,NM,NM
-201105,District Of Columbia : electric utility,--,5,--
 201105,FL,3.67,5.77,16.33
 201105,GA,3.88,4.82,NM
 201105,MD,--,0,NM
@@ -2112,7 +2071,6 @@ YYMM,States,Coal,NG,Petroleum
 201106,ND,1.37,7.58,21.44
 201106,SD,2.07,6.25,NM
 201106,DE,--,NM,NM
-201106,District Of Columbia : electric utility,--,5.21,--
 201106,FL,3.43,6.04,21.48
 201106,GA,3.78,5,23.44
 201106,MD,--,0,NM
@@ -2163,7 +2121,6 @@ YYMM,States,Coal,NG,Petroleum
 201107,ND,1.41,7.02,24.57
 201107,SD,2.02,4.75,NM
 201107,DE,--,5.14,NM
-201107,District Of Columbia : electric utility,--,5.07,--
 201107,FL,3.55,5.98,23.09
 201107,GA,3.9,4.86,24
 201107,MD,--,0,NM
@@ -2214,7 +2171,6 @@ YYMM,States,Coal,NG,Petroleum
 201108,ND,1.36,6.94,24.31
 201108,SD,2.04,4.85,NM
 201108,DE,--,4.82,NM
-201108,District Of Columbia : electric utility,--,4.76,--
 201108,FL,3.61,5.9,22.75
 201108,GA,3.9,4.53,23.09
 201108,MD,--,0,NM
@@ -2265,7 +2221,6 @@ YYMM,States,Coal,NG,Petroleum
 201109,ND,1.43,7.91,23.99
 201109,SD,2.12,6.38,23.75
 201109,DE,--,NM,NM
-201109,District Of Columbia : electric utility,--,NM,--
 201109,FL,3.39,5.75,17.67
 201109,GA,3.73,4.38,22.95
 201109,MD,--,0,NM
@@ -2316,7 +2271,6 @@ YYMM,States,Coal,NG,Petroleum
 201110,ND,1.28,7.48,24.3
 201110,SD,2.22,5.56,NM
 201110,DE,--,NM,NM
-201110,District Of Columbia : electric utility,--,4.08,--
 201110,FL,3.52,5.8,22.08
 201110,GA,3.66,3.9,22.86
 201110,MD,--,0,NM
@@ -2367,7 +2321,6 @@ YYMM,States,Coal,NG,Petroleum
 201111,ND,1.29,0,23.49
 201111,SD,2.17,11.16,24.93
 201111,DE,--,NM,NM
-201111,District Of Columbia : electric utility,--,NM,--
 201111,FL,3.45,5.6,22.23
 201111,GA,3.57,3.76,23.95
 201111,MD,--,0,NM
@@ -2418,7 +2371,6 @@ YYMM,States,Coal,NG,Petroleum
 201112,ND,1.36,7.16,23.46
 201112,SD,2.11,7.9,18.3
 201112,DE,--,NM,NM
-201112,District Of Columbia : electric utility,--,NM,0
 201112,FL,3.46,5.5,21.88
 201112,GA,3.64,3.68,22.81
 201112,MD,--,0,NM
@@ -2469,7 +2421,6 @@ YYMM,States,Coal,NG,Petroleum
 201301,ND,1.39,6.85,22.1
 201301,SD,2.71,5.6,0
 201301,DE,--,0,0
-201301,District Of Columbia : electric utility,--,--,--
 201301,FL,3.54,5.06,22.3
 201301,GA,3.64,3.21,23.81
 201301,MD,--,0,0
@@ -2520,7 +2471,6 @@ YYMM,States,Coal,NG,Petroleum
 201302,ND,1.42,0,23.55
 201302,SD,2.47,5.11,0
 201302,DE,--,0,0
-201302,District Of Columbia : electric utility,--,--,--
 201302,FL,3.39,4.83,24.82
 201302,GA,3.51,3.12,24.66
 201302,MD,--,0,0
@@ -2571,7 +2521,6 @@ YYMM,States,Coal,NG,Petroleum
 201303,ND,1.48,5.54,25.25
 201303,SD,2.03,4.02,0
 201303,DE,--,0,0
-201303,District Of Columbia : electric utility,--,--,--
 201303,FL,3.41,4.46,24.74
 201303,GA,3.52,2.8,25.73
 201303,MD,--,0,0
@@ -2622,7 +2571,6 @@ YYMM,States,Coal,NG,Petroleum
 201304,ND,1.63,0,25.42
 201304,SD,2.35,2.98,0
 201304,DE,--,0,0
-201304,District Of Columbia : electric utility,--,--,--
 201304,FL,3.58,4.52,24.07
 201304,GA,3.43,2.51,25.12
 201304,MD,--,0,0
@@ -2673,7 +2621,6 @@ YYMM,States,Coal,NG,Petroleum
 201305,ND,1.59,4.68,23.35
 201305,SD,2.21,3.41,0
 201305,DE,--,0,0
-201305,District Of Columbia : electric utility,--,--,--
 201305,FL,3.55,4.5,22.78
 201305,GA,3.61,2.94,23.69
 201305,MD,--,0,0
@@ -2724,7 +2671,6 @@ YYMM,States,Coal,NG,Petroleum
 201306,ND,1.51,4.85,21.31
 201306,SD,2.2,3.3,20.69
 201306,DE,--,0,0
-201306,District Of Columbia : electric utility,--,--,--
 201306,FL,3.49,4.66,20.24
 201306,GA,3.58,3.03,21.18
 201306,MD,--,0,0
@@ -2775,7 +2721,6 @@ YYMM,States,Coal,NG,Petroleum
 201307,ND,1.42,5.22,22.72
 201307,SD,2.16,3.23,0
 201307,DE,--,0,0
-201307,District Of Columbia : electric utility,--,--,--
 201307,FL,3.41,4.83,18.27
 201307,GA,3.57,3.51,22.5
 201307,MD,--,0,0
@@ -2826,7 +2771,6 @@ YYMM,States,Coal,NG,Petroleum
 201308,ND,1.41,5.67,25.44
 201308,SD,2.13,3.29,0
 201308,DE,--,0,0
-201308,District Of Columbia : electric utility,--,--,--
 201308,FL,3.44,4.89,19.86
 201308,GA,3.51,3.41,25.1
 201308,MD,--,0,0
@@ -2877,7 +2821,6 @@ YYMM,States,Coal,NG,Petroleum
 201309,ND,1.62,0,25.38
 201309,SD,2.12,4.86,0
 201309,DE,--,0,0
-201309,District Of Columbia : electric utility,--,--,--
 201309,FL,3.61,4.78,24.08
 201309,GA,3.36,3.39,25.51
 201309,MD,--,0,0
@@ -2928,7 +2871,6 @@ YYMM,States,Coal,NG,Petroleum
 201310,ND,1.5,0,24.23
 201310,SD,2.17,5.59,0
 201310,DE,--,0,0
-201310,District Of Columbia : electric utility,--,--,--
 201310,FL,3.52,5.02,23.92
 201310,GA,3.31,3.87,25.26
 201310,MD,--,0,0
@@ -2979,7 +2921,6 @@ YYMM,States,Coal,NG,Petroleum
 201311,ND,1.47,7.13,24.07
 201311,SD,2.11,4.42,0
 201311,DE,--,0,0
-201311,District Of Columbia : electric utility,--,--,--
 201311,FL,3.47,5.28,18.88
 201311,GA,3.25,4.33,23.52
 201311,MD,--,0,0
@@ -3030,7 +2971,6 @@ YYMM,States,Coal,NG,Petroleum
 201312,ND,1.49,0,22.36
 201312,SD,2.03,4.35,0
 201312,DE,--,0,0
-201312,District Of Columbia : electric utility,--,--,--
 201312,FL,3.42,5.24,18.82
 201312,GA,3.29,3.97,24.37
 201312,MD,--,0,0
@@ -3081,7 +3021,6 @@ YYMM,States,Coal,NG,Petroleum
 201401,ND,1.44,4.97,21.71
 201401,SD,2.11,3.61,0
 201401,DE,--,0,0
-201401,District Of Columbia : electric utility,--,--,--
 201401,FL,3.48,5.16,24.1
 201401,GA,3.38,4.01,24.2
 201401,MD,--,0,0
@@ -3132,7 +3071,6 @@ YYMM,States,Coal,NG,Petroleum
 201402,ND,1.48,4.86,23.73
 201402,SD,2.02,4.42,0
 201402,DE,--,0,0
-201402,District Of Columbia : electric utility,--,--,--
 201402,FL,3.38,4.72,24.69
 201402,GA,3.29,3.88,25.83
 201402,MD,--,0,0
@@ -3183,7 +3121,6 @@ YYMM,States,Coal,NG,Petroleum
 201403,ND,1.48,5.14,23.99
 201403,SD,2.02,4.53,23.3
 201403,DE,--,0,0
-201403,District Of Columbia : electric utility,--,--,--
 201403,FL,3.49,4.83,17.75
 201403,GA,3.24,4.35,23.74
 201403,MD,--,0,0
@@ -3234,7 +3171,6 @@ YYMM,States,Coal,NG,Petroleum
 201404,ND,1.58,5.7,23.04
 201404,SD,1.94,4.5,0
 201404,DE,--,0,0
-201404,District Of Columbia : electric utility,--,--,--
 201404,FL,3.55,5.4,22.51
 201404,GA,3.27,4.86,22.79
 201404,MD,--,0,0
@@ -3285,7 +3221,6 @@ YYMM,States,Coal,NG,Petroleum
 201405,ND,1.64,5.51,23.97
 201405,SD,2.2,5.1,0
 201405,DE,--,0,0
-201405,District Of Columbia : electric utility,--,--,--
 201405,FL,3.59,5.35,18.71
 201405,GA,3.28,4.8,22.01
 201405,MD,--,0,0
@@ -3336,7 +3271,6 @@ YYMM,States,Coal,NG,Petroleum
 201406,ND,1.66,5.3,23.38
 201406,SD,1.97,5.39,0
 201406,DE,--,0,0
-201406,District Of Columbia : electric utility,--,--,--
 201406,FL,3.45,5.22,22.42
 201406,GA,3.05,4.53,22.47
 201406,MD,--,0,0
@@ -3387,7 +3321,6 @@ YYMM,States,Coal,NG,Petroleum
 201407,ND,1.54,4.91,22.78
 201407,SD,1.94,3.95,0
 201407,DE,--,0,0
-201407,District Of Columbia : electric utility,--,--,--
 201407,FL,3.29,5.06,23.23
 201407,GA,2.98,4.27,23.77
 201407,MD,--,0,0
@@ -3438,7 +3371,6 @@ YYMM,States,Coal,NG,Petroleum
 201408,ND,1.53,4.84,23.76
 201408,SD,1.94,3.95,0
 201408,DE,--,0,0
-201408,District Of Columbia : electric utility,--,--,--
 201408,FL,3.37,4.73,17.02
 201408,GA,3.13,4,24.06
 201408,MD,--,0,0
@@ -3489,7 +3421,6 @@ YYMM,States,Coal,NG,Petroleum
 201409,ND,1.65,4.95,23.79
 201409,SD,1.97,4.03,23.33
 201409,DE,--,0,0
-201409,District Of Columbia : electric utility,--,--,--
 201409,FL,3.37,5.04,23.47
 201409,GA,3.02,4.23,24.05
 201409,MD,--,0,0
@@ -3540,7 +3471,6 @@ YYMM,States,Coal,NG,Petroleum
 201410,ND,1.46,5.46,23.7
 201410,SD,2.01,4.4,0
 201410,DE,--,0,0
-201410,District Of Columbia : electric utility,--,--,--
 201410,FL,3.31,4.97,22.8
 201410,GA,3.14,4.24,23.4
 201410,MD,--,0,0
@@ -3591,7 +3521,6 @@ YYMM,States,Coal,NG,Petroleum
 201411,ND,1.61,5.61,23.52
 201411,SD,1.97,4.02,0
 201411,DE,--,0,0
-201411,District Of Columbia : electric utility,--,--,--
 201411,FL,3.26,4.93,23.43
 201411,GA,3.23,4.25,22.89
 201411,MD,--,0,0
@@ -3642,7 +3571,6 @@ YYMM,States,Coal,NG,Petroleum
 201412,ND,1.62,6.08,23.24
 201412,SD,2.06,4.83,23.34
 201412,DE,--,0,0
-201412,District Of Columbia : electric utility,--,--,--
 201412,FL,3.44,5.44,24.04
 201412,GA,3.18,4.88,23.43
 201412,MD,--,0,0
@@ -3693,7 +3621,6 @@ YYMM,States,Coal,NG,Petroleum
 201501,ND,1.49,0,22.56
 201501,SD,2.2,8.23,23.34
 201501,DE,--,0,0
-201501,District Of Columbia : electric utility,--,--,--
 201501,FL,3.29,5.68,19.31
 201501,GA,3,5.44,23.35
 201501,MD,--,0,0
@@ -3744,7 +3671,6 @@ YYMM,States,Coal,NG,Petroleum
 201502,ND,1.42,0,22.3
 201502,SD,2.17,17.77,0
 201502,DE,--,0,0
-201502,District Of Columbia : electric utility,--,--,--
 201502,FL,3.38,6.63,22.95
 201502,GA,3.13,6.78,23.86
 201502,MD,--,0,0
@@ -3795,7 +3721,6 @@ YYMM,States,Coal,NG,Petroleum
 201503,ND,1.41,7.55,24.17
 201503,SD,2.08,9.18,0
 201503,DE,--,0,0
-201503,District Of Columbia : electric utility,--,--,--
 201503,FL,3.32,5.76,23.25
 201503,GA,3.21,5.58,24.21
 201503,MD,--,0,0
@@ -3846,7 +3771,6 @@ YYMM,States,Coal,NG,Petroleum
 201504,ND,1.55,0,23.68
 201504,SD,2.03,4.92,0
 201504,DE,--,0,0
-201504,District Of Columbia : electric utility,--,--,--
 201504,FL,3.38,5.55,24.05
 201504,GA,3.16,5.29,23.68
 201504,MD,--,0,0
@@ -3897,7 +3821,6 @@ YYMM,States,Coal,NG,Petroleum
 201505,ND,1.64,4.5,22.75
 201505,SD,2.1,3.73,0
 201505,DE,--,0,0
-201505,District Of Columbia : electric utility,--,--,--
 201505,FL,3.4,5.78,23.71
 201505,GA,3.03,5.19,22.95
 201505,MD,--,0,0
@@ -3948,7 +3871,6 @@ YYMM,States,Coal,NG,Petroleum
 201506,ND,1.64,5.09,26.75
 201506,SD,2.14,5.47,22.57
 201506,DE,--,0,0
-201506,District Of Columbia : electric utility,--,--,--
 201506,FL,3.35,5.6,23.95
 201506,GA,3.16,5.17,23.17
 201506,MD,--,0,0
@@ -3999,7 +3921,6 @@ YYMM,States,Coal,NG,Petroleum
 201507,ND,1.69,4.32,22.2
 201507,SD,2.04,3.33,0
 201507,DE,--,0,0
-201507,District Of Columbia : electric utility,--,--,--
 201507,FL,3.34,5.26,22.82
 201507,GA,3.17,4.65,22.41
 201507,MD,--,0,0
@@ -4050,7 +3971,6 @@ YYMM,States,Coal,NG,Petroleum
 201508,ND,1.61,3.8,23.48
 201508,SD,2.07,3.84,0
 201508,DE,--,0,0
-201508,District Of Columbia : electric utility,--,--,--
 201508,FL,3.31,4.98,22.34
 201508,GA,3.15,4.41,22.43
 201508,MD,--,0,0
@@ -4101,7 +4021,6 @@ YYMM,States,Coal,NG,Petroleum
 201509,ND,1.61,3.55,22.27
 201509,SD,2.02,4.8,0
 201509,DE,--,0,0
-201509,District Of Columbia : electric utility,--,--,--
 201509,FL,3.29,5.22,21.95
 201509,GA,3.19,4.46,21.52
 201509,MD,--,0,0
@@ -4152,7 +4071,6 @@ YYMM,States,Coal,NG,Petroleum
 201510,ND,1.43,3.45,21.97
 201510,SD,2.06,6.47,0
 201510,DE,--,0,0
-201510,District Of Columbia : electric utility,--,--,--
 201510,FL,3.22,5.12,18.44
 201510,GA,2.94,4.27,20.27
 201510,MD,--,0,0
@@ -4203,7 +4121,6 @@ YYMM,States,Coal,NG,Petroleum
 201511,ND,1.38,4.99,21.87
 201511,SD,2.09,3.23,0
 201511,DE,--,0,0
-201511,District Of Columbia : electric utility,--,--,--
 201511,FL,3.22,5.34,20.15
 201511,GA,3.02,4.58,19.46
 201511,MD,--,0,0
@@ -4254,7 +4171,6 @@ YYMM,States,Coal,NG,Petroleum
 201512,ND,1.52,4.14,16.31
 201512,SD,2.07,3.51,0
 201512,DE,--,0,0
-201512,District Of Columbia : electric utility,--,--,--
 201512,FL,3.21,5.32,10.78
 201512,GA,2.97,3.9,16.71
 201512,MD,--,0,0
@@ -4305,7 +4221,6 @@ YYMM,States,Coal,NG,Petroleum
 201601,ND,1.45,11.6,11.75
 201601,SD,2.14,2.78,12.44
 201601,DE,--,0,0
-201601,District Of Columbia : electric utility,--,--,--
 201601,FL,3.17,4.81,13.99
 201601,GA,3,3.72,13.93
 201601,MD,--,0,0
@@ -4356,7 +4271,6 @@ YYMM,States,Coal,NG,Petroleum
 201602,ND,1.57,8.84,16.63
 201602,SD,2.21,2.89,0
 201602,DE,--,0,0
-201602,District Of Columbia : electric utility,--,--,--
 201602,FL,3.1,4.7,15.27
 201602,GA,3,3.5,46.3
 201602,MD,--,0,0
@@ -4407,7 +4321,6 @@ YYMM,States,Coal,NG,Petroleum
 201603,ND,1.7,9.77,12.89
 201603,SD,0,2.63,0
 201603,DE,--,0,0
-201603,District Of Columbia : electric utility,--,--,--
 201603,FL,3.02,4.4,16.54
 201603,GA,2.95,3.37,13.88
 201603,MD,--,0,0
@@ -4458,7 +4371,6 @@ YYMM,States,Coal,NG,Petroleum
 201604,ND,1.56,7.99,12.73
 201604,SD,0,3.25,0
 201604,DE,--,0,0
-201604,District Of Columbia : electric utility,--,--,--
 201604,FL,3.07,4.27,17
 201604,GA,2.92,3.23,13.7
 201604,MD,--,0,0
@@ -4509,7 +4421,6 @@ YYMM,States,Coal,NG,Petroleum
 201605,ND,1.56,11.09,13.56
 201605,SD,0,2.91,0
 201605,DE,--,0,0
-201605,District Of Columbia : electric utility,--,--,--
 201605,FL,2.98,4.32,16.38
 201605,GA,3.12,3.5,14.84
 201605,MD,--,0,0
@@ -4560,7 +4471,6 @@ YYMM,States,Coal,NG,Petroleum
 201606,ND,1.61,8.42,14.1
 201606,SD,2.91,3.34,0
 201606,DE,--,0,0
-201606,District Of Columbia : electric utility,--,--,--
 201606,FL,3.03,4.46,13.81
 201606,GA,2.94,3.3,13.73
 201606,MD,--,0,0
@@ -4611,7 +4521,6 @@ YYMM,States,Coal,NG,Petroleum
 201607,ND,1.45,11.15,13.29
 201607,SD,2.34,3.56,0
 201607,DE,--,0,0
-201607,District Of Columbia : electric utility,--,--,--
 201607,FL,3.01,4.35,13.5
 201607,GA,2.91,3.33,12.61
 201607,MD,--,0,0
@@ -4662,7 +4571,6 @@ YYMM,States,Coal,NG,Petroleum
 201608,ND,1.5,6.56,12.06
 201608,SD,2.29,4,12.81
 201608,DE,--,0,0
-201608,District Of Columbia : electric utility,--,--,--
 201608,FL,3.1,4.4,11.73
 201608,GA,2.93,3.29,11.1
 201608,MD,--,0,0
@@ -4713,7 +4621,6 @@ YYMM,States,Coal,NG,Petroleum
 201609,ND,1.66,8.74,11.87
 201609,SD,1.95,3.12,0
 201609,DE,--,0,0
-201609,District Of Columbia : electric utility,--,--,--
 201609,FL,3.13,4.4,11.71
 201609,GA,2.93,3.25,10.96
 201609,MD,--,0,0
@@ -4764,7 +4671,6 @@ YYMM,States,Coal,NG,Petroleum
 201610,ND,1.43,8.79,11.79
 201610,SD,2.12,2.74,8.24
 201610,DE,--,0,0
-201610,District Of Columbia : electric utility,--,--,--
 201610,FL,3.14,4.21,11.85
 201610,GA,2.76,2.8,10.82
 201610,MD,--,0,0
@@ -4815,7 +4721,6 @@ YYMM,States,Coal,NG,Petroleum
 201611,ND,1.65,11.52,11.18
 201611,SD,2.93,2.76,0
 201611,DE,--,0,0
-201611,District Of Columbia : electric utility,--,--,--
 201611,FL,3.14,3.9,11.89
 201611,GA,2.69,2.6,10.74
 201611,MD,--,0,0
@@ -4866,7 +4771,6 @@ YYMM,States,Coal,NG,Petroleum
 201612,ND,1.63,7.24,9.96
 201612,SD,2.03,2.13,0
 201612,DE,--,0,0
-201612,District Of Columbia : electric utility,--,--,--
 201612,FL,3.1,3.93,9.15
 201612,GA,2.97,2.33,8.55
 201612,MD,--,0,0
@@ -4917,7 +4821,6 @@ YYMM,States,Coal,NG,Petroleum
 201601,ND,1.44,2.45,6.31
 201601,SD,2.24,2.42,7.54
 201601,DE,--,0,0
-201601,District Of Columbia : electric utility,--,--,--
 201601,FL,2.95,3.94,8.21
 201601,GA,2.82,2.98,8.13
 201601,MD,--,0,0
@@ -4968,7 +4871,6 @@ YYMM,States,Coal,NG,Petroleum
 201602,ND,1.51,2.23,6.59
 201602,SD,2.14,1.96,0
 201602,DE,--,0,0
-201602,District Of Columbia : electric utility,--,--,--
 201602,FL,2.98,3.88,8.86
 201602,GA,2.96,2.57,8.07
 201602,MD,--,0,0
@@ -5019,7 +4921,6 @@ YYMM,States,Coal,NG,Petroleum
 201603,ND,1.62,1.91,7.79
 201603,SD,2.4,1.72,0
 201603,DE,--,0,0
-201603,District Of Columbia : electric utility,--,--,--
 201603,FL,3.05,3.39,9
 201603,GA,2.89,2.19,8.87
 201603,MD,--,0,0
@@ -5070,7 +4971,6 @@ YYMM,States,Coal,NG,Petroleum
 201604,ND,1.67,2.09,8.08
 201604,SD,2.23,1.94,0
 201604,DE,--,0,0
-201604,District Of Columbia : electric utility,--,--,--
 201604,FL,3.19,3.54,10.73
 201604,GA,2.82,2.41,9.47
 201604,MD,--,0,0
@@ -5121,7 +5021,6 @@ YYMM,States,Coal,NG,Petroleum
 201605,ND,1.62,2.04,10.49
 201605,SD,2.27,1.97,0
 201605,DE,--,0,0
-201605,District Of Columbia : electric utility,--,--,--
 201605,FL,2.94,3.57,9.45
 201605,GA,2.84,2.42,10.48
 201605,MD,--,0,0
@@ -5172,7 +5071,6 @@ YYMM,States,Coal,NG,Petroleum
 201606,ND,1.61,2.64,10.74
 201606,SD,2.25,2.38,0
 201606,DE,--,0,0
-201606,District Of Columbia : electric utility,--,--,--
 201606,FL,3.12,3.4,13.41
 201606,GA,2.9,3.02,11.29
 201606,MD,--,0,0
@@ -5223,7 +5121,6 @@ YYMM,States,Coal,NG,Petroleum
 201607,ND,1.51,2.89,10.56
 201607,SD,2.16,2.72,0
 201607,DE,--,0,0
-201607,District Of Columbia : electric utility,--,--,--
 201607,FL,3.02,3.66,15.76
 201607,GA,2.77,3.26,10.29
 201607,MD,--,0,0
@@ -5274,7 +5171,6 @@ YYMM,States,Coal,NG,Petroleum
 201608,ND,1.43,2.98,9.11
 201608,SD,2.21,2.77,0
 201608,DE,--,0,0
-201608,District Of Columbia : electric utility,--,--,--
 201608,FL,3.06,3.86,7.46
 201608,GA,2.75,3.29,10.53
 201608,MD,--,0,0
@@ -5325,7 +5221,6 @@ YYMM,States,Coal,NG,Petroleum
 201609,ND,1.63,3.08,12.17
 201609,SD,2.27,3.19,0
 201609,DE,--,0,0
-201609,District Of Columbia : electric utility,--,--,--
 201609,FL,2.98,4,11.51
 201609,GA,2.77,3.52,10.67
 201609,MD,--,0,0
@@ -5376,7 +5271,6 @@ YYMM,States,Coal,NG,Petroleum
 201610,ND,1.4,3.11,12.82
 201610,SD,2.28,3.19,0
 201610,DE,--,0,0
-201610,District Of Columbia : electric utility,--,--,--
 201610,FL,2.92,4.06,13.62
 201610,GA,2.69,3.48,11.71
 201610,MD,--,0,0
@@ -5427,7 +5321,6 @@ YYMM,States,Coal,NG,Petroleum
 201611,ND,1.5,2.74,8.44
 201611,SD,2.3,2.36,10.54
 201611,DE,--,0,0
-201611,District Of Columbia : electric utility,--,--,--
 201611,FL,3,4.01,12.05
 201611,GA,2.68,3.07,10.86
 201611,MD,--,0,0
