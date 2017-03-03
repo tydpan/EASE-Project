@@ -12,18 +12,19 @@ def RF(prec, ts, tw, ws):
     import warnings
 
     train = pd.read_csv('../Arranged_Data/final_weater.csv')[[
-            'State', 'TotalMonthlyPrecip', 'TempSummer', 
+            'State', 'TotalMonthlyPrecip', 'TempSummer',
             'TempWinter', 'Avgwindspeed']]
-    
+    train = train[train.State != 'DC']
+
     warnings.filterwarnings('ignore')
-    
+
     input_ = [prec, ts, tw, ws]
     tree_num = 100
     pred_list = []
     vote = {}
     rf = RandomForestClassifier(n_estimators = tree_num)
     rf.fit(train.iloc[:,1:5], train.State)
-    
+
     for i in range(tree_num):
         dt = rf.estimators_[i]
         dt.fit(train.iloc[:,1:5], train.State)
