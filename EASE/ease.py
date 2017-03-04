@@ -69,3 +69,28 @@ def avg_capacity(vote):
         wind_sum += int(average_plant_capacity.Wind[
             average_plant_capacity.State == i]) * vote[i]
     return ([coal_sum, ng_sum, petro_sum, hydro_sum, solar_sum, wind_sum])
+
+def possible_type(avg_cap_list):
+    import pandas as pd
+    from scipy import stats
+    cap_pop = pd.read_csv('../Arranged_Data/average_plant_capacity.csv')
+    e_type = ['Coal', 'NG', 'Petro', 'Hydro', 'Solar', 'Wind']
+    possible_type_list = []
+    for i in range(len(e_type)):
+        p_value = stats.ttest_1samp(
+                cap_pop[cap_pop[e_type[i]] != 0][
+                    e_type[i]], avg_cap_list[i])[1]
+        alpha = 0.05  #confidence
+        if avg_cap_list[i] < cap_pop[cap_pop[e_type[i]] !=0][
+                e_type[i]].mean():
+            if p_value < alpha:
+                pass
+            else:
+                p_value = -(1 - p_value)
+                possible_type_list.append(
+                        [p_value, avg_cap_list[i], e_type[i]])
+        else:
+            p_value = (1 - p_value)
+            possible_type_list.append(
+                    [p_value, avg_cap_list[i], e_type[i]])
+    return possible_type_list
