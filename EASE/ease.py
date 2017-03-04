@@ -76,6 +76,11 @@ def avg_capacity(vote):
     return ([coal_sum, ng_sum, petro_sum, hydro_sum, solar_sum, wind_sum])
 
 def possible_type(avg_cap_list):
+    """
+    This function is to choose possible source type base on
+    p value calculation, comparing to USA average and
+    significance level (alpha) = 0.05.
+    """
     import pandas as pd
     from scipy import stats
     cap_pop = pd.read_csv('../Arranged_Data/average_plant_capacity.csv')
