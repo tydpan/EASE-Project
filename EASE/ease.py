@@ -43,3 +43,29 @@ def rf(prec, ts, tw, ws):
     for i in range(len(pred_key)):
         vote[pred_key[i]] = pred_key_count[i]/tree_num
     return vote
+
+def avg_capacity(vote):
+    import pandas as pd
+    average_plant_capacity = pd.read_csv(
+            '../Arranged_Data/average_plant_capacity.csv')
+    avg_cap_list = []
+    coal_sum = 0
+    ng_sum = 0
+    petro_sum = 0
+    hydro_sum = 0
+    solar_sum = 0
+    wind_sum =0
+    for i in vote.keys():
+        coal_sum += int(average_plant_capacity.Coal[
+            average_plant_capacity.State == i]) * vote[i]
+        ng_sum += int(average_plant_capacity.NG[
+            average_plant_capacity.State == i]) * vote[i]
+        petro_sum += int(average_plant_capacity.Petro[
+            average_plant_capacity.State == i]) * vote[i]
+        hydro_sum += int(average_plant_capacity.Hydro[
+            average_plant_capacity.State == i]) * vote[i]
+        solar_sum += int(average_plant_capacity.Solar[
+            average_plant_capacity.State == i]) * vote[i]
+        wind_sum += int(average_plant_capacity.Wind[
+            average_plant_capacity.State == i]) * vote[i]
+    return ([coal_sum, ng_sum, petro_sum, hydro_sum, solar_sum, wind_sum])
