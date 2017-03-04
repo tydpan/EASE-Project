@@ -45,6 +45,11 @@ def rf(prec, ts, tw, ws):
     return vote
 
 def avg_capacity(vote):
+    """
+    This function is to do weighted average of
+    capacity per plant in each state based on our
+    RandomForest classifier's result.
+    """
     import pandas as pd
     average_plant_capacity = pd.read_csv(
             '../Arranged_Data/average_plant_capacity.csv')
