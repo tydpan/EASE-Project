@@ -1,4 +1,4 @@
-def RF(prec, ts, tw, ws):
+def rf(prec, ts, tw, ws):
     """
     This function is RandomForest classifier to intake user input temperature, precipitation, and windespeed to classify the possible states the user will be in, and returns a
     dictionary with states as the keys and the frequency or count as the values of each key.
