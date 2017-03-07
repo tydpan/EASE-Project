@@ -1,3 +1,5 @@
+![alt tag](https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/EASE_3.jpg)
+
 EASE-Project_v1.0
 ====================
 
