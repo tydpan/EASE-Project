@@ -1,4 +1,4 @@
-<p align="center">![alt tag](https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/EASE_3.jpg)</p>
+<p align="center"><img ![alt tag](https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/EASE_3.jpg)/></p>
 
 EASE-Project_v1.0
 ====================
