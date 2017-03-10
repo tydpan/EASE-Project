@@ -19,7 +19,7 @@ Jiarong I. Cui**(1)**, Tai-Yu D. Pan**(1)**, Jiayuan Guo**(1)**, Yongquan Xie**(
 ---------
 License
 ---------
-No License has been created just yet, it will be added shortly.
+This work is under GNU GPLv3 licence, such that it requires anyone who distributes this code or a derivative work to make the source available under the same terms, and also provides an express grant of patent rights from contributors to users.
 
 -------------------
 Database Sources
