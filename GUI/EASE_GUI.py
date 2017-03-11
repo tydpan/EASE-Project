@@ -60,10 +60,9 @@ class MainPage(tk.Frame):
 
         self.temp_sum(controller)
         self.temp_wint(controller)
+        self.precipitation()
 
-
-
-
+        """
         # prec
         self.prec = tk.StringVar()
         self.prec.set('Anticipated annual rain fall :')
@@ -76,16 +75,12 @@ class MainPage(tk.Frame):
                        'A few weeks a year ( 1.5~2 )', 'A few months a year ( 2~2.5 )', 'Half of the time ( 2.5~3 )',
                        'More than Half of the time ( 3~4 )', 'Almost every single day (>4)']
         tk.OptionMenu(self.frame, self.prec, *option_list).grid(row=3, column=2, pady=5, padx=5, sticky='w')
-#        self.abc = lambda: self.prec_dict[self.prec.get()]
-#        self.abc = self.abc()
-        #controller.prec = self.prec_dict[self.prec.get()]
-        #self.prec.trace('w', self.try3(controller))
-
+#
         tk.Label(self.frame, text='Precipitation:', highlightthickness=0, bd=0).grid(
             row=3, column=0, pady=5, padx=5, sticky='e')
         tk.Label(self.frame, text='( inch )', highlightthickness=0, bd=0).grid(
             row=3, column=1, pady=5, padx=5, sticky='e')
-        """
+
         # wind speed
         tk.Label(frame, text='Wind Speed:', highlightthickness=0, bd=0).grid(
             row=4, column=0, pady=5, padx=5, sticky='e')
@@ -114,7 +109,6 @@ class MainPage(tk.Frame):
     def try3(self, controller):
         print(controller.prec)
 
-
     def logo(self):
         logo_frame = tk.Frame(self)
         logo_frame.pack()
@@ -142,6 +136,23 @@ class MainPage(tk.Frame):
         controller.tw = tk.DoubleVar()
         tk.Entry(self.frame, textvariable=controller.tw, bg='grey', width=5).grid(
             row=2, column=2, pady=5, padx=5, sticky='w')
+
+    def precipitation(self):
+        self.prec = tk.StringVar()
+        self.prec.set('Anticipated annual rain fall :')
+        self.prec_dict = {'Anticipated annual rain fall :': None, 'Almost never rain ( <1 )': 0.5,
+                          'A few days a year ( 1~1.5 )': 1.25, 'A few weeks a year ( 1.5~2 )': 1.75,
+                          'A few months a year ( 2~2.5 )': 2.25, 'Half of the time ( 2.5~3 )': 2.75,
+                          'More than Half of the time ( 3~4 )': 3.5, 'Almost every single day (>4)': 4.8}
+
+        option_list = ['Anticipated annual rain fall :', 'Almost never rain ( <1 )', 'A few days a year ( 1~1.5 )',
+                       'A few weeks a year ( 1.5~2 )', 'A few months a year ( 2~2.5 )', 'Half of the time ( 2.5~3 )',
+                       'More than Half of the time ( 3~4 )', 'Almost every single day (>4)']
+        tk.OptionMenu(self.frame, self.prec, *option_list).grid(row=3, column=2, pady=5, padx=5, sticky='w')
+        tk.Label(self.frame, text='Precipitation:', highlightthickness=0, bd=0).grid(
+            row=3, column=0, pady=5, padx=5, sticky='e')
+        tk.Label(self.frame, text='( inch )', highlightthickness=0, bd=0).grid(
+            row=3, column=1, pady=5, padx=5, sticky='e')
 
 
 if __name__ == '__main__':
