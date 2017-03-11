@@ -196,9 +196,9 @@ def avg_cost(vote):
 def clean_or_conv(possible_type_list):
     """
     initialize a null list to store conventional resource
-    initialize a null lsit to store clean resource
+    initialize a null list to store clean resource
     for some type in all types
-        if type equals coal, natural gas, or petroleum, append it to conventional lsit
+        if type equals coal, natural gas, or petroleum, append it to conventional list
         elseif type equals hydro, soalr, or wind, append it to clean list
     retun conventional list, clean list
     """
@@ -211,12 +211,13 @@ def clean_or_conv(possible_type_list):
             clean_list.append(i)
     return conventional_list, clean_list
 
+
 def sort_and_pick(source_list):
     """"""
     source_list.sort()
     if len(source_list) == 3:
         ref = source_list[2]
-        if abs(source_list[2][0] - source_list[1][0]) < 0.05 and abs(source_list[1][0] - source_list[0][0]) < 0.05 :
+        if abs(source_list[2][0] - source_list[1][0]) < 0.05 and abs(source_list[1][0] - source_list[0][0]) < 0.05:
             for i in source_list:
                 if i[1] > ref[1]:
                     ref = i
