@@ -89,9 +89,12 @@ class MainPage(tk.Frame):
             row=1, column=0, pady=5, padx=5, sticky='e')
         tk.Label(self.frame, text='( \u2109 )', highlightthickness=0, bd=0).grid(
             row=1, column=1, pady=5, padx=5, sticky='e')
-        ref = tk.Label(self.frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline", foreground='blue')
+
+        text = 'Eg: \nThe summer temperature in California is about 75 \u2109, suitable to wear short-sleeved T-shirt.'
+        ref = tk.Label(self.frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline",
+                       foreground='blue')
         ref.grid(row=1, column=2, pady=5, padx=5, sticky='e')
-        Tooltip(ref, text='North West', wraplength=200)
+        Tooltip(ref, text=text, wraplength=200)
 
         controller.ts = tk.DoubleVar()
         tk.Entry(self.frame, textvariable=controller.ts, bg='grey', width=5).grid(
@@ -102,6 +105,12 @@ class MainPage(tk.Frame):
             row=2, column=0, pady=5, padx=5, sticky='e')
         tk.Label(self.frame, text='( \u2109 )', highlightthickness=0, bd=0).grid(
             row=2, column=1, pady=5, padx=5, sticky='e')
+
+        text = 'Eg: \nThe winter temperature in New York is about 30 \u2109, suitable to wear coat.'
+        ref = tk.Label(self.frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline",
+                       foreground='blue')
+        ref.grid(row=2, column=2, pady=5, padx=5, sticky='e')
+        Tooltip(ref, text=text, wraplength=200)
 
         controller.tw = tk.DoubleVar()
         tk.Entry(self.frame, textvariable=controller.tw, bg='grey', width=5).grid(
