@@ -4,6 +4,9 @@
 import tkinter as tk
 from tkinter import messagebox as mb
 
+import sys
+sys.path.append('./')
+
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
