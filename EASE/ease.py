@@ -25,11 +25,11 @@ def rf(prec, ts, tw, ws):
     tree_num = 5000
     pred_list = []
     vote = {}
-    rf = RandomForestClassifier(n_estimators=tree_num)
-    rf.fit(train.iloc[:, 1:5], train.State)
+    rfc = RandomForestClassifier(n_estimators=tree_num)
+    rfc.fit(train.iloc[:, 1:5], train.State)
 
     for i in range(tree_num):
-        dt = rf.estimators_[i]
+        dt = rfc.estimators_[i]
         dt.fit(train.iloc[:, 1:5], train.State)
         pred = dt.predict(input_)
         pred_list.append(pred[0])
