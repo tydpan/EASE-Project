@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 
 import tkinter as tk
-
+from tkinter import messagebox as mb
 
 class App(tk.Tk):
     def __init__(self):
@@ -64,10 +64,9 @@ class MainPage(tk.Frame):
         self.wind_speed(controller)
         self.capacity()
 
-        but = tk.Button(self.frame, text='try', command=lambda: self.get_cap(controller))
+        but = tk.Button(self.frame, text='try', command=lambda: self.check_value(controller))
         but.grid(row=0)
 
-        Tooltip(but, text='North West', wraplength=200)
 
     def try11(self, value):
         print(value)
@@ -167,7 +166,7 @@ class MainPage(tk.Frame):
         option_list = ['Feeling about wind :', 'Light air ( <5 )', 'Light breeze ( 5~6 )', 'Gentle breeze ( 6~7 )',
                        'Moderate breeze ( 7~8 )', 'Fresh Breeze ( 8~9 )', 'Strong wind ( 9~10 )', 'Light air ( <5 )',
                        'Gale ( 10~14 )']
-        om = tk.OptionMenu(self.frame, self.ws, *option_list, command=lambda: self.get_ws(controller))
+        om = tk.OptionMenu(self.frame, self.ws, *option_list)
         om.grid(row=4, column=3, pady=5, padx=5, sticky='w')
         om.config(width=25)
 
@@ -195,6 +194,32 @@ class MainPage(tk.Frame):
 
     def get_cap(self, controller):
         controller.cap = self.cap.get() * 1000
+
+    def check_value(self, controller):
+        #print(controller.ts.get())
+        self.get_prec(controller)
+        self.get_ws(controller)
+        self.get_cap(controller)
+        #print(controller.prec)
+        while True:
+            if controller.prec != None:
+                pass
+            else:
+                mb.showerror(title='Error', message='Please choose a precipitation.')
+                break
+            if controller.ws == None:
+                mb.showerror(title='Error', message='Please choose a wind speed.')
+                break
+            else:
+                pass
+            if controller.cap == 0:
+                mb.showerror(title='Error', message='Please choose a value of capacity.')
+                break
+            else:
+                pass
+
+            break
+
 
 
 class Tooltip:
