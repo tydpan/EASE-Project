@@ -22,15 +22,15 @@ def rf(prec, ts, tw, ws):
     warnings.filterwarnings('ignore')
 
     input_ = [prec, ts, tw, ws]
-    tree_num = 100
+    tree_num = 5000
     pred_list = []
     vote = {}
-    rf = RandomForestClassifier(n_estimators = tree_num)
-    rf.fit(train.iloc[:,1:5], train.State)
+    rf = RandomForestClassifier(n_estimators=tree_num)
+    rf.fit(train.iloc[:, 1:5], train.State)
 
     for i in range(tree_num):
         dt = rf.estimators_[i]
-        dt.fit(train.iloc[:,1:5], train.State)
+        dt.fit(train.iloc[:, 1:5], train.State)
         pred = dt.predict(input_)
         pred_list.append(pred[0])
 
@@ -44,6 +44,7 @@ def rf(prec, ts, tw, ws):
         vote[pred_key[i]] = pred_key_count[i]/tree_num
     return vote
 
+
 def avg_capacity(vote):
     """
     This function is to do weighted average of
@@ -53,7 +54,6 @@ def avg_capacity(vote):
     import pandas as pd
     average_plant_capacity = pd.read_csv(
             '../Arranged_Data/average_plant_capacity.csv')
-    avg_cap_list = []
     coal_sum = 0
     ng_sum = 0
     petro_sum = 0
