@@ -58,53 +58,24 @@ class MainPage(tk.Frame):
         self.frame = tk.Frame(self)
         self.frame.pack()
 
+        # widgets
         self.temp_sum(controller)
         self.temp_wint(controller)
         self.precipitation()
+        self.wind_speed()
 
         """
-        # prec
-        self.prec = tk.StringVar()
-        self.prec.set('Anticipated annual rain fall :')
-        self.prec_dict = {'Anticipated annual rain fall :': None, 'Almost never rain ( <1 )': 0.5,
-                     'A few days a year ( 1~1.5 )': 1.25, 'A few weeks a year ( 1.5~2 )': 1.75,
-                     'A few months a year ( 2~2.5 )': 2.25, 'Half of the time ( 2.5~3 )': 2.75,
-                     'More than Half of the time ( 3~4 )': 3.5, 'Almost every single day (>4)': 4.8}
-
-        option_list = ['Anticipated annual rain fall :', 'Almost never rain ( <1 )', 'A few days a year ( 1~1.5 )',
-                       'A few weeks a year ( 1.5~2 )', 'A few months a year ( 2~2.5 )', 'Half of the time ( 2.5~3 )',
-                       'More than Half of the time ( 3~4 )', 'Almost every single day (>4)']
-        tk.OptionMenu(self.frame, self.prec, *option_list).grid(row=3, column=2, pady=5, padx=5, sticky='w')
-#
-        tk.Label(self.frame, text='Precipitation:', highlightthickness=0, bd=0).grid(
-            row=3, column=0, pady=5, padx=5, sticky='e')
-        tk.Label(self.frame, text='( inch )', highlightthickness=0, bd=0).grid(
-            row=3, column=1, pady=5, padx=5, sticky='e')
-
-        # wind speed
-        tk.Label(frame, text='Wind Speed:', highlightthickness=0, bd=0).grid(
-            row=4, column=0, pady=5, padx=5, sticky='e')
-        tk.Label(frame, text='( m/s )', highlightthickness=0, bd=0).grid(
-            row=4, column=1, pady=5, padx=5, sticky='e')
-
         #capacity
         tk.Label(frame, text='Capacity:', highlightthickness=0, bd=0).grid(
             row=5, column=0, pady=5, padx=5, sticky='e')
         tk.Label(frame, text='( Mwh )', highlightthickness=0, bd=0).grid(
             row=5, column=1, pady=5, padx=5, sticky='e')
-
-
         """
-        self.try2(controller)
-        tk.Button(self.frame, text='try', command=lambda: [f for f in [self.try2(controller), self.try3(controller)]]).grid(row=0)
 
+        tk.Button(self.frame, text='try', command=lambda: [f for f in [self.get_prec(controller), self.get_ws(controller)]]).grid(row=0)
 
     def try11(self, value):
         print(value)
-
-    def try2(self, controller):
-        controller.prec = self.prec_dict[self.prec.get()]
-        print(controller.prec)
 
     def try3(self, controller):
         print(controller.prec)
@@ -148,12 +119,41 @@ class MainPage(tk.Frame):
         option_list = ['Anticipated annual rain fall :', 'Almost never rain ( <1 )', 'A few days a year ( 1~1.5 )',
                        'A few weeks a year ( 1.5~2 )', 'A few months a year ( 2~2.5 )', 'Half of the time ( 2.5~3 )',
                        'More than Half of the time ( 3~4 )', 'Almost every single day (>4)']
-        tk.OptionMenu(self.frame, self.prec, *option_list).grid(row=3, column=2, pady=5, padx=5, sticky='w')
+
+        om = tk.OptionMenu(self.frame, self.prec, *option_list)
+        om.grid(row=3, column=2, pady=5, padx=5, sticky='w')
+        om.config(width=25)
+
         tk.Label(self.frame, text='Precipitation:', highlightthickness=0, bd=0).grid(
             row=3, column=0, pady=5, padx=5, sticky='e')
         tk.Label(self.frame, text='( inch )', highlightthickness=0, bd=0).grid(
             row=3, column=1, pady=5, padx=5, sticky='e')
 
+    def get_prec(self, controller):
+        controller.prec = self.prec_dict[self.prec.get()]
+
+    def wind_speed(self):
+        self.ws = tk.StringVar()
+        self.ws.set('Feeling about wind :')
+        self.ws_dict = {'Feeling about wind :': None, 'Light air ( <5 )': 2.5, 'Light breeze ( 5~6 )': 5.5,
+                        'Gentle breeze ( 6~7 )': 6.5, 'Moderate breeze ( 7~8 )': 7.5, 'Fresh Breeze ( 8~9 )': 8.5,
+                        'Strong wind ( 9~10 )': 9.5, 'Gale ( 10~14 )': 12}
+
+        option_list = ['Feeling about wind :', 'Light air ( <5 )', 'Light breeze ( 5~6 )', 'Gentle breeze ( 6~7 )',
+                       'Moderate breeze ( 7~8 )', 'Fresh Breeze ( 8~9 )', 'Strong wind ( 9~10 )', 'Light air ( <5 )',
+                       'Gale ( 10~14 )']
+
+        om = tk.OptionMenu(self.frame, self.ws, *option_list)
+        om.grid(row=4, column=2, pady=5, padx=5, sticky='w')
+        om.config(width=25)
+
+        tk.Label(self.frame, text='Wind Speed:', highlightthickness=0, bd=0).grid(
+            row=4, column=0, pady=5, padx=5, sticky='e')
+        tk.Label(self.frame, text='( m/s )', highlightthickness=0, bd=0).grid(
+            row=4, column=1, pady=5, padx=5, sticky='e')
+
+    def get_ws(self, controller):
+        controller.ws = self.ws_dict[self.ws.get()]
 
 if __name__ == '__main__':
     app = App()
