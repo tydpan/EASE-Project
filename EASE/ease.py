@@ -119,15 +119,17 @@ def rf_fluctuation(prec, ts, tw, ws):
         select key which has maximum wt% and append key and its value to seperate null list
     return max wt%, std, keys
     """
+    import numpy as np
     max_keys = []
-    max_values =[]
+    max_values = []
     for i in range(10):
         i = rf(prec, ts, tw, ws)
         max_i_value = max(i.values())
         max_key = max(i.keys(), key=(lambda k: i[k]))
         max_values.append(max_i_value)
         max_keys.append(max_key)
-    return (max_values, np.std(max_values), max_keys)
+    return [max_values, np.std(max_values), max_keys]
+
 
 def rev_plot(avg_cost, capacity, e_type, label, avg_cost_conv = 0, capacity_conv = 0):
     """
