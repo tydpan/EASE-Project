@@ -59,7 +59,7 @@ def avg_capacity(vote):
     petro_sum = 0
     hydro_sum = 0
     solar_sum = 0
-    wind_sum =0
+    wind_sum = 0
     for i in vote.keys():
         coal_sum += int(average_plant_capacity.Coal[
             average_plant_capacity.State == i]) * vote[i]
@@ -73,7 +73,8 @@ def avg_capacity(vote):
             average_plant_capacity.State == i]) * vote[i]
         wind_sum += int(average_plant_capacity.Wind[
             average_plant_capacity.State == i]) * vote[i]
-    return ([coal_sum, ng_sum, petro_sum, hydro_sum, solar_sum, wind_sum])
+    return [coal_sum, ng_sum, petro_sum, hydro_sum, solar_sum, wind_sum]
+
 
 def possible_type(avg_cap_list):
     """
