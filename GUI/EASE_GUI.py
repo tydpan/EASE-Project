@@ -117,6 +117,17 @@ class MainPage(tk.Frame):
             row=2, column=3, pady=5, padx=5, sticky='w')
 
     def precipitation(self):
+        tk.Label(self.frame, text='Precipitation:', highlightthickness=0, bd=0).grid(
+            row=3, column=0, pady=5, padx=5, sticky='e')
+        tk.Label(self.frame, text='( inch )', highlightthickness=0, bd=0).grid(
+            row=3, column=1, pady=5, padx=5, sticky='e')
+
+        text = 'Eg: \nThe winter temperature in New York is about 30 \u2109, suitable to wear coat.'
+        ref = tk.Label(self.frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline",
+                       foreground='blue')
+        ref.grid(row=3, column=2, pady=5, padx=5, sticky='e')
+        Tooltip(ref, text=text, wraplength=200)
+
         self.prec = tk.StringVar()
         self.prec.set('Anticipated annual rain fall :')
         self.prec_dict = {'Anticipated annual rain fall :': None, 'Almost never rain ( <1 )': 0.5,
@@ -127,15 +138,9 @@ class MainPage(tk.Frame):
         option_list = ['Anticipated annual rain fall :', 'Almost never rain ( <1 )', 'A few days a year ( 1~1.5 )',
                        'A few weeks a year ( 1.5~2 )', 'A few months a year ( 2~2.5 )', 'Half of the time ( 2.5~3 )',
                        'More than Half of the time ( 3~4 )', 'Almost every single day (>4)']
-
         om = tk.OptionMenu(self.frame, self.prec, *option_list)
         om.grid(row=3, column=3, pady=5, padx=5, sticky='w')
         om.config(width=25)
-
-        tk.Label(self.frame, text='Precipitation:', highlightthickness=0, bd=0).grid(
-            row=3, column=0, pady=5, padx=5, sticky='e')
-        tk.Label(self.frame, text='( inch )', highlightthickness=0, bd=0).grid(
-            row=3, column=1, pady=5, padx=5, sticky='e')
 
     def get_prec(self, controller):
         controller.prec = self.prec_dict[self.prec.get()]
