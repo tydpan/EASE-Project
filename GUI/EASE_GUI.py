@@ -206,7 +206,11 @@ class MainPage(tk.Frame):
             except tk.TclError:
                 mb.showerror(title='Error', message='Please insert a correct value of temperature in summer.')
                 break
-
+            try:
+                controller.tw.get()
+            except tk.TclError:
+                mb.showerror(title='Error', message='Please insert a correct value of temperature in winter.')
+                break
             if controller.prec != None:
                 pass
             else:
@@ -222,7 +226,6 @@ class MainPage(tk.Frame):
                 break
             else:
                 pass
-
             break
 
 
