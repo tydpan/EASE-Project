@@ -2,7 +2,6 @@
 #-*- coding: utf-8 -*-
 
 import tkinter as tk
-from tkinter import ttk
 
 
 class App(tk.Tk):
@@ -65,7 +64,7 @@ class MainPage(tk.Frame):
         self.wind_speed(controller)
         self.capacity()
 
-        but = tk.Button(self.frame, text='try', command=lambda: print(controller.ws))
+        but = tk.Button(self.frame, text='try', command=lambda: self.get_cap(controller))
         but.grid(row=0)
 
         Tooltip(but, text='North West', wraplength=200)
@@ -90,7 +89,7 @@ class MainPage(tk.Frame):
         tk.Label(self.frame, text='( \u2109 )', highlightthickness=0, bd=0).grid(
             row=1, column=1, pady=5, padx=5, sticky='e')
 
-        text = 'Eg: \nThe summer temperature in California is about 75 \u2109, suitable to wear short-sleeved T-shirt.'
+        text = 'Eg:\nThe summer temperature in California is about 75 \u2109, suitable to wear short-sleeved T-shirt.'
         ref = tk.Label(self.frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline",
                        foreground='blue')
         ref.grid(row=1, column=2, pady=5, padx=5, sticky='e')
@@ -106,7 +105,7 @@ class MainPage(tk.Frame):
         tk.Label(self.frame, text='( \u2109 )', highlightthickness=0, bd=0).grid(
             row=2, column=1, pady=5, padx=5, sticky='e')
 
-        text = 'Eg: \nThe winter temperature in New York is about 30 \u2109, suitable to wear coat.'
+        text = 'Eg:\nThe winter temperature in New York is about 30 \u2109, suitable to wear coat.'
         ref = tk.Label(self.frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline",
                        foreground='blue')
         ref.grid(row=2, column=2, pady=5, padx=5, sticky='e')
@@ -122,7 +121,7 @@ class MainPage(tk.Frame):
         tk.Label(self.frame, text='( inch )', highlightthickness=0, bd=0).grid(
             row=3, column=1, pady=5, padx=5, sticky='e')
 
-        text = 'Eg: \nThe winter temperature in New York is about 30 \u2109, suitable to wear coat.'
+        text = 'Eg:\nThe winter temperature in New York is about 30 \u2109, suitable to wear coat.'
         ref = tk.Label(self.frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline",
                        foreground='blue')
         ref.grid(row=3, column=2, pady=5, padx=5, sticky='e')
@@ -146,40 +145,56 @@ class MainPage(tk.Frame):
         controller.prec = self.prec_dict[self.prec.get()]
 
     def wind_speed(self, controller):
-        self.ws = tk.StringVar()
-        self.ws.set('Feeling about wind :')
-        self.ws_dict = {'Feeling about wind :': None, 'Light air ( <5 )': 2.5, 'Light breeze ( 5~6 )': 5.5,
-                        'Gentle breeze ( 6~7 )': 6.5, 'Moderate breeze ( 7~8 )': 7.5, 'Fresh Breeze ( 8~9 )': 8.5,
-                        'Strong wind ( 9~10 )': 9.5, 'Gale ( 10~14 )': 12}
-
-        option_list = ['Feeling about wind :', 'Light air ( <5 )', 'Light breeze ( 5~6 )', 'Gentle breeze ( 6~7 )',
-                       'Moderate breeze ( 7~8 )', 'Fresh Breeze ( 8~9 )', 'Strong wind ( 9~10 )', 'Light air ( <5 )',
-                       'Gale ( 10~14 )']
-
-        om = tk.OptionMenu(self.frame, self.ws, *option_list, command=lambda: self.get_ws(controller))
-        om.grid(row=4, column=3, pady=5, padx=5, sticky='w')
-        om.config(width=25)
-
         tk.Label(self.frame, text='Wind Speed:', highlightthickness=0, bd=0).grid(
             row=4, column=0, pady=5, padx=5, sticky='e')
         tk.Label(self.frame, text='( m/s )', highlightthickness=0, bd=0).grid(
             row=4, column=1, pady=5, padx=5, sticky='e')
 
+        text = 'Wind Speed:\nLight air : Smoke drifts and leaves rustle.\nLight breeze : Wind felt on face.\n' \
+               'Gentle breeze : Flags extended, leaves move.\nModerate breeze : Dust and small branches move.\n' \
+               'Fresh breeze : Small trees begin to sway.\nStrong wind : Umbrella are difficult to control.\n' \
+               'Gale : Inconvenience in walking.'
+        ref = tk.Label(self.frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline",
+                       foreground='blue')
+        ref.grid(row=4, column=2, pady=5, padx=5, sticky='e')
+        Tooltip(ref, text=text, wraplength=500)
+
+        self.ws = tk.StringVar()
+        self.ws.set('Feeling about wind :')
+        self.ws_dict = {'Feeling about wind :': None, 'Light air ( <5 )': 2.5, 'Light breeze ( 5~6 )': 5.5,
+                        'Gentle breeze ( 6~7 )': 6.5, 'Moderate breeze ( 7~8 )': 7.5, 'Fresh Breeze ( 8~9 )': 8.5,
+                        'Strong wind ( 9~10 )': 9.5, 'Gale ( 10~14 )': 12}
+        option_list = ['Feeling about wind :', 'Light air ( <5 )', 'Light breeze ( 5~6 )', 'Gentle breeze ( 6~7 )',
+                       'Moderate breeze ( 7~8 )', 'Fresh Breeze ( 8~9 )', 'Strong wind ( 9~10 )', 'Light air ( <5 )',
+                       'Gale ( 10~14 )']
+        om = tk.OptionMenu(self.frame, self.ws, *option_list, command=lambda: self.get_ws(controller))
+        om.grid(row=4, column=3, pady=5, padx=5, sticky='w')
+        om.config(width=25)
+
     def get_ws(self, controller):
         controller.ws = self.ws_dict[self.ws.get()]
 
     def capacity(self):
-        """
-        tk.Label(self.frame, text='Capacity:', highlightthickness=0, bd=0).grid(
-            row=5, column=0, pady=5, padx=5, sticky='e')
-        tk.Label(self.frame, text='( Mwh )', highlightthickness=0, bd=0).grid(
-            row=5, column=1, pady=5, padx=5, sticky='e')
-        """
         self.scale_frame = tk.Frame(self)
         self.scale_frame.pack()
 
-        tk.Scale(self.scale_frame, label="Capacity: ( 10\u00B3 Mwh )", from_=0, to=3500, resolution=5, length=500,
-                 orient='horizontal', tickinterval=500).grid(row=0, column=0, pady=5, padx=5, sticky='nsew')
+        self.cap = tk.Scale(self.scale_frame, label="Capacity: ( 10\u00B3 Mwh )", from_=0, to=3500, resolution=5,
+                            length=500, orient='horizontal', tickinterval=500)
+        self.cap.grid(row=0, column=0, pady=5, padx=5, sticky='nsew')
+
+        text = 'Capacity:\nA small electricity plant generate less than 50,000 MWh a year, which can provide ' \
+               'electricity for a city block.\nA medium electricity plant generate 50,000~200,000 MWh a year, ' \
+               'which can provide about 10,000 households.\nA large electricity plant generate more than 200,000 MWh ' \
+               'a year, which can provide electricity for the total Bellevue in WA.\nThe largest plant capacity ' \
+               'in 2015 in U.S. is about 3,500,000 MWh a year. \nNote : The average annual electricity consumption ' \
+               'for one household in U.S. is 10 MWh.'
+        ref = tk.Label(self.scale_frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline",
+                       foreground='blue')
+        ref.grid(row=0, column=1, pady=5, padx=5, sticky='e')
+        Tooltip(ref, text=text, wraplength=500)
+
+    def get_cap(self, controller):
+        controller.cap = self.cap.get() * 1000
 
 
 class Tooltip:
