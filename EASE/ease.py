@@ -91,8 +91,8 @@ def possible_type(avg_cap_list):
         p_value = stats.ttest_1samp(
                 cap_pop[cap_pop[e_type[i]] != 0][
                     e_type[i]], avg_cap_list[i])[1]
-        alpha = 0.05  #confidence
-        if avg_cap_list[i] < cap_pop[cap_pop[e_type[i]] !=0][
+        alpha = 0.05  # confidence
+        if avg_cap_list[i] < cap_pop[cap_pop[e_type[i]] != 0][
                 e_type[i]].mean():
             if p_value < alpha:
                 pass
@@ -105,6 +105,7 @@ def possible_type(avg_cap_list):
             possible_type_list.append(
                     [p_value, avg_cap_list[i], e_type[i]])
     return possible_type_list
+
 
 def rf_fluctuation(prec, ts, tw, ws):
     """
