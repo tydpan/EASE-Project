@@ -56,6 +56,7 @@ def avg_capacity(vote):
     RandomForest classifier's result.
     """
     import pandas as pd
+
     average_plant_capacity = pd.read_csv(
             '../Arranged_Data/average_plant_capacity.csv')
     coal_sum = 0
@@ -88,6 +89,7 @@ def possible_type(avg_cap_list):
     """
     import pandas as pd
     from scipy import stats
+
     cap_pop = pd.read_csv('../Arranged_Data/average_plant_capacity.csv')
     e_type = ['Coal', 'NG', 'Petro', 'Hydro', 'Solar', 'Wind']
     possible_type_list = []
@@ -120,6 +122,7 @@ def rf_fluctuation(prec, ts, tw, ws):
     return max wt%, std, keys
     """
     import numpy as np
+
     max_keys = []
     max_values = []
     for i in range(10):
@@ -131,20 +134,27 @@ def rf_fluctuation(prec, ts, tw, ws):
     return [max_values, np.std(max_values), max_keys]
 
 
-def rev_plot(avg_cost, capacity, e_type, label, avg_cost_conv = 0, capacity_conv = 0):
+def rev_plot(avg_cost, capacity, e_type, label, avg_cost_conv=0, capacity_conv=0):
     """
     if resource type is conventional, conventional revenue equals (sale - carbon dioxide tax - average cost) * capacity
     elseif resource type is clean, clean revenue equals (sale - average cost) * capacity
     elseif total revenue equals conventional revenue + clean revenue
     return plot
     """
-    esales = pd.read_csv('../Arranged_Data/Cost/Sale_CO2_tax.csv', skiprows= 1, names = ['Year', 'Sale', 'CO2_tax'])
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    revenue = 0
+    esales = pd.read_csv('../Arranged_Data/Cost/Sale_CO2_tax.csv', skiprows=1, names=['Year', 'Sale', 'CO2_tax'])
     if e_type == 'conventional':
         revenue = (esales.Sale - esales.CO2_tax - avg_cost) * capacity / 1e6
     elif e_type == 'clean':
         revenue = (esales.Sale - avg_cost) * capacity / 1e6
     elif e_type == 'total':
-        revenue = ((esales.Sale - avg_cost) * capacity + (esales.Sale - esales.CO2_tax - avg_cost_conv) * capacity_conv) / 1e6
+        revenue = ((esales.Sale - avg_cost) * capacity + (
+            esales.Sale - esales.CO2_tax - avg_cost_conv) * capacity_conv) / 1e6
+
     plt.plot(np.arange(2018, 2051), revenue[3:], label=label)
     plt.xlabel('Year')
     plt.ylabel('Money Save (million dollars / year)')
