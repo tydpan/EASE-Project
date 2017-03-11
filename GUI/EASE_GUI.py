@@ -68,7 +68,7 @@ class MainPage(tk.Frame):
         self.wind_speed(controller)
         self.capacity()
 
-        but = tk.Button(self.frame, text='try', command=lambda: self.check_value(controller))
+        but = tk.Button(self.frame, text='try', command=lambda: self.ease_suggest(controller))
         but.grid(row=0)
 
 
@@ -203,31 +203,46 @@ class MainPage(tk.Frame):
         self.get_prec(controller)
         self.get_ws(controller)
         self.get_cap(controller)
-        self.n = 0
+        self.n = True
 #        print(ease.rf(2, 75, 30, 1.5))
         while True:
             try:
                 controller.ts.get()
             except tk.TclError:
+                self.n = False
                 mb.showerror(title='Error', message='Please insert a correct value of temperature in summer.')
                 break
             try:
                 controller.tw.get()
             except tk.TclError:
+                self.n = False
                 mb.showerror(title='Error', message='Please insert a correct value of temperature in winter.')
                 break
             if controller.ts.get() == controller.tw.get() and controller.ts.get() == 0:
+                self.n = False
                 mb.showerror(title='Error', message='Please insert a value of temperature.')
                 break
             if controller.prec == None:
+                self.n = False
                 mb.showerror(title='Error', message='Please choose a precipitation.')
                 break
             if controller.ws == None:
+                self.n = False
                 mb.showerror(title='Error', message='Please choose a wind speed.')
                 break
             if controller.cap == 0:
+                self.n = False
                 mb.showerror(title='Error', message='Please choose a value of capacity.')
                 break
+            break
+
+    def ease_suggest(self, controller):
+        self.check_value(controller)
+        while self.n == True:
+            print('Start')
+            controller.result = ease.suggest(
+                controller.prec, controller.ts.get(), controller.tw.get(), controller.ws, controller.cap)
+            print('Controller.result')
             break
 
 
