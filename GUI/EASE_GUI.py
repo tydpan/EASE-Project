@@ -62,7 +62,9 @@ class MainPage(tk.Frame):
         self.temp_sum(controller)
         self.temp_wint(controller)
         self.precipitation()
-        self.wind_speed()
+        self.wind_speed(controller)
+        self.capacity()
+
 
         """
         #capacity
@@ -72,7 +74,7 @@ class MainPage(tk.Frame):
             row=5, column=1, pady=5, padx=5, sticky='e')
         """
 
-        tk.Button(self.frame, text='try', command=lambda: [f for f in [self.get_prec(controller), self.get_ws(controller)]]).grid(row=0)
+        tk.Button(self.frame, text='try', command=lambda: print(controller.ws)).grid(row=0)
 
     def try11(self, value):
         print(value)
@@ -132,7 +134,7 @@ class MainPage(tk.Frame):
     def get_prec(self, controller):
         controller.prec = self.prec_dict[self.prec.get()]
 
-    def wind_speed(self):
+    def wind_speed(self, controller):
         self.ws = tk.StringVar()
         self.ws.set('Feeling about wind :')
         self.ws_dict = {'Feeling about wind :': None, 'Light air ( <5 )': 2.5, 'Light breeze ( 5~6 )': 5.5,
@@ -143,7 +145,7 @@ class MainPage(tk.Frame):
                        'Moderate breeze ( 7~8 )', 'Fresh Breeze ( 8~9 )', 'Strong wind ( 9~10 )', 'Light air ( <5 )',
                        'Gale ( 10~14 )']
 
-        om = tk.OptionMenu(self.frame, self.ws, *option_list)
+        om = tk.OptionMenu(self.frame, self.ws, *option_list, command=lambda: self.get_ws(controller))
         om.grid(row=4, column=2, pady=5, padx=5, sticky='w')
         om.config(width=25)
 
@@ -154,6 +156,19 @@ class MainPage(tk.Frame):
 
     def get_ws(self, controller):
         controller.ws = self.ws_dict[self.ws.get()]
+
+    def capacity(self):
+        """
+        tk.Label(self.frame, text='Capacity:', highlightthickness=0, bd=0).grid(
+            row=5, column=0, pady=5, padx=5, sticky='e')
+        tk.Label(self.frame, text='( Mwh )', highlightthickness=0, bd=0).grid(
+            row=5, column=1, pady=5, padx=5, sticky='e')
+        """
+        self.scale_frame = tk.Frame(self)
+        self.scale_frame.pack()
+
+        tk.Scale(self.scale_frame, label="Capacity: ( 10\u00B3 Mwh )", from_=0, to=3500, resolution=5, length=500,
+                 orient='horizontal', tickinterval=500).grid(row=0, column=0, pady=5, padx=5, sticky='nsew')
 
 if __name__ == '__main__':
     app = App()
