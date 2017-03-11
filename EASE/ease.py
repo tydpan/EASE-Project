@@ -142,8 +142,8 @@ def rev_plot(avg_cost, capacity, e_type, label, avg_cost_conv=0, capacity_conv=0
     return plot
     """
     import pandas as pd
-    import numpy as np
     import matplotlib.pyplot as plt
+    import numpy as np
 
     revenue = 0
     esales = pd.read_csv('../Arranged_Data/Cost/Sale_CO2_tax.csv', skiprows=1, names=['Year', 'Sale', 'CO2_tax'])
@@ -162,22 +162,25 @@ def rev_plot(avg_cost, capacity, e_type, label, avg_cost_conv=0, capacity_conv=0
     plt.grid()
     return plt
 
+
 def avg_cost(vote):
     """
     set original resources cost euqal to zero
     for state in vote keys
-        average cost of resource = average cost of particular resource in specific state * vote results of specific state
+        average cost of resource =
+                                average cost of particular resource in specific state * vote results of specific state
     creat a dictionary to store average cost for each type of resource
-    return average cost dictinary
+    return average cost dictionary
     """
     import pandas as pd
+
     cost = pd.read_csv('../Arranged_Data/Cost/df_cost.csv')
     coal_sum = 0
     ng_sum = 0
     petro_sum = 0
     hydro_sum = 0
     solar_sum = 0
-    wind_sum =0
+    wind_sum = 0
     for i in vote.keys():
         coal_sum += int(cost.Coal[cost.State == i]) * vote[i]
         ng_sum += int(cost.NG[cost.State == i]) * vote[i]
@@ -185,8 +188,10 @@ def avg_cost(vote):
         hydro_sum += int(cost.Hydro[cost.State == i]) * vote[i]
         solar_sum += int(cost.solar[cost.State == i]) * vote[i]
         wind_sum += int(cost.WindCost[cost.State == i]) * vote[i]
-    avg_cost_dict = {'Coal':coal_sum, 'NG':ng_sum, 'Petro':petro_sum, 'Hydro':hydro_sum, 'Solar':solar_sum, 'Wind':wind_sum}
+    avg_cost_dict = {'Coal': coal_sum, 'NG': ng_sum, 'Petro': petro_sum, 'Hydro': hydro_sum, 'Solar': solar_sum,
+                     'Wind': wind_sum}
     return avg_cost_dict
+
 
 def clean_or_conv(possible_type_list):
     """
