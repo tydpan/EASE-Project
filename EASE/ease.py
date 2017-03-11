@@ -1,3 +1,7 @@
+#!/usr/bin/pythons
+#-*- coding: utf-8 -*-
+
+
 def rf(prec, ts, tw, ws):
     """
     This function is RandomForest classifier to intake user input temperature,
