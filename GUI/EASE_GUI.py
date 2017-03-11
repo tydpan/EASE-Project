@@ -196,12 +196,17 @@ class MainPage(tk.Frame):
         controller.cap = self.cap.get() * 1000
 
     def check_value(self, controller):
-        #print(controller.ts.get())
         self.get_prec(controller)
         self.get_ws(controller)
         self.get_cap(controller)
-        #print(controller.prec)
+        self.n = 0
         while True:
+            try:
+                controller.ts.get()
+            except tk.TclError:
+                mb.showerror(title='Error', message='Please insert a correct value of temperature in summer.')
+                break
+
             if controller.prec != None:
                 pass
             else:
