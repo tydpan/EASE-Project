@@ -5,7 +5,8 @@ import tkinter as tk
 from tkinter import messagebox as mb
 
 import sys
-sys.path.append('./')
+sys.path.append('../EASE')
+import ease
 
 class App(tk.Tk):
     def __init__(self):
@@ -203,6 +204,7 @@ class MainPage(tk.Frame):
         self.get_ws(controller)
         self.get_cap(controller)
         self.n = 0
+#        print(ease.rf(2, 75, 30, 1.5))
         while True:
             try:
                 controller.ts.get()
@@ -214,21 +216,18 @@ class MainPage(tk.Frame):
             except tk.TclError:
                 mb.showerror(title='Error', message='Please insert a correct value of temperature in winter.')
                 break
-            if controller.prec != None:
-                pass
-            else:
+            if controller.ts.get() == controller.tw.get() and controller.ts.get() == 0:
+                mb.showerror(title='Error', message='Please insert a value of temperature.')
+                break
+            if controller.prec == None:
                 mb.showerror(title='Error', message='Please choose a precipitation.')
                 break
             if controller.ws == None:
                 mb.showerror(title='Error', message='Please choose a wind speed.')
                 break
-            else:
-                pass
             if controller.cap == 0:
                 mb.showerror(title='Error', message='Please choose a value of capacity.')
                 break
-            else:
-                pass
             break
 
 
