@@ -266,7 +266,6 @@ def suggest(prec, ts, tw, ws, capacity):
     conventional, clean = clean_or_conv(source_list)
     conventional = sort_and_pick(conventional)
     clean = sort_and_pick(clean)
-    df = pd.DataFrame()
     if len(clean) == 0:
         capacity = min([conventional[1], capacity])
 
@@ -291,14 +290,14 @@ def suggest(prec, ts, tw, ws, capacity):
             for k in conventional:
                 if k in source_co2:
                     conversion_to_co2 = source_co2[k]
-            print('Emitted Co2 using', conventional[2], 'is:',
-                  int(capacity - clean[1]) * conversion_to_co2 * 0.000453592, 'metric tons')
-            df['Year'] = [2016, 2050]
-            df['CO2_emission'] = [capacity * conversion_to_co2 * 0.000453592,
+#            print('Emitted Co2 using', conventional[2], 'is:',
+#                  int(capacity - clean[1]) * conversion_to_co2 * 0.000453592, 'metric tons')
+            co2_year = [2016, 2050]
+            co2_emission = [capacity * conversion_to_co2 * 0.000453592,
                                   (capacity - clean[1]) * conversion_to_co2 * 0.000453592]
             plt.subplot(122)
-            co2_plot = plt.bar(df.Year, df.CO2_emission, width=12, color='#6495ED')
-            plt.xticks(df.Year, ('Pure Conventional', 'Conventional + Clean'))
+            co2_plot = plt.bar(co2_year, co2_emission, width=12, color='#6495ED')
+            plt.xticks(co2_year, ('Pure Conventional', 'Conventional + Clean'))
             plt.xlabel('Profiles')
             plt.ylabel('CO2 Emission (Metric Tons)')
             plt.grid(linestyle='dotted')
