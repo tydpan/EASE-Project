@@ -7,6 +7,7 @@ Background
 ------------
 
 Electricity is main source of energy across the globe, such that electricity generation based on conventional energy sources (Petroleum, Coal, and Natrual Gas) are accompanied with large amount of grean house gas emission, particularly the carbon dioxide gas. The figure below mapped out the electricity generation plant with different types of energy sources within the United States in year 2015.
+
 <img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/Background_2015_EDM.png" alt="...">
 
 Electricity Analysis Suggestion Ensemble, or short for EASE, is a Proejct guided by the eScience Insititue and Chemical Engineering Department at the University of Washington. 
@@ -45,6 +46,7 @@ Database Sources
     * Cost of Wind Resource [https://emp.lbl.gov/projects/wind](https://emp.lbl.gov/projects/wind)
   
 EASE cost prediction is largely based on 2015 average plant construction cost data, this includes but not limited to installation cost, maintenance cost,  operation cost, and electricity sale price. Carbon dioxide taxation is based on a 2013 proposed legislation (S. 332 of the 113th) 
+
 -----------------------
 Software Depedencies
 -----------------------
