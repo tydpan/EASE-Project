@@ -80,7 +80,13 @@ Folders
 
 **Arrange_Data** - The folder contains the iPython scripts that import and clean different original raw dataset from the **Original_Data** folder. 
 
-**Model** - The code for the model, EASE_v1.0, and all other scripts for the model development.
+**EASE** - The code for the model, EASE_v1.0, and all other scripts for the model development.
+
+**GUI** -  The folder contains GUI development code.
+
+**README.md** - descrption of background, License, Database Sources, Unittest, Software Installation, Folder Descriptions and Acknowledgement
+
+**LICENSE.md** - Outlines of the GPL-3.0 license for this package.
 
 -------------------
 Acknowledgements
