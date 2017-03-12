@@ -245,6 +245,18 @@ def sort_and_pick(source_list):
     return ref
 
 
+def autolabel(rects):
+    """
+    Attach a text label above each bar displaying its values, or heights
+    """
+    for rect in rects:
+        height = rect.get_height()
+        plt.text(rect.get_x() + rect.get_width()/2., 1*height,
+                '%d' % int(height),
+                ha='center', va='bottom')
+    return
+
+
 def suggest(prec, ts, tw, ws, capacity):
     """
     if no clean resource, clean revenue equals zero, calculate conventional capacity and plot revenue from conventional
@@ -302,5 +314,5 @@ def suggest(prec, ts, tw, ws, capacity):
             plt.ylabel('CO2 Emission (Metric Tons)')
             plt.grid(linestyle='dotted')
             plt.title('CO2 Emission Comparison Graph')
-#            autolabel(co2_plot)
+            autolabel(co2_plot)
     return result
