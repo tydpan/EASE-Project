@@ -88,6 +88,7 @@ def possible_type(avg_cap_list):
     significance level (alpha) = 0.05.
     """
     import pandas as pd
+    import numpy as np
     from scipy import stats
 
     cap_pop = pd.read_csv('../Arranged_Data/average_plant_capacity.csv')
@@ -116,7 +117,7 @@ def possible_type(avg_cap_list):
             pass
         else:
             possible_type_list.append(
-                [-1, avg_cap_list[0:3].max(), avg_cap_list.index(avg_cap_list[0:3].max())])
+                [-1, avg_cap_list[0:3].max(), e_type[avg_cap_list.index(avg_cap_list[0:3].max())]])
     return possible_type_list
 
 
