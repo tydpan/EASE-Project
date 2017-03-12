@@ -298,4 +298,4 @@ def suggest(prec, ts, tw, ws, capacity):
             plt.ylabel('CO2 Emission (Metric Tons)')
             plt.grid(linestyle='dotted')
             plt.title('CO2 Emission with ' + conventional[2])
-    return revenue_clean, revenue_conv, revenue_total, co2_plot
+    return plt
