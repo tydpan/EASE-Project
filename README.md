@@ -2,6 +2,13 @@
 EASE-Project_v1.0
 ====================
 
+------------
+Background
+------------
+
+Electricity is main source of energy across the globe, such that electricity generation based on conventional energy sources (Petroleum, Coal, and Natrual Gas) are accompanied with large amount of grean house gas emission, particularly the carbon dioxide gas. The figure below mapped out the electricity generation plant with different types of energy sources within the United States in year 2015.
+<img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/Background_2015_EDM.png" alt="...">
+
 Electricity Analysis Suggestion Ensemble, or short for EASE, is a Proejct guided by the eScience Insititue and Chemical Engineering Department at the University of Washington. 
 
 EASE is a suggestion model with an aim to help industrial users who desire to build an electricity generation plant that offsets long term cost from continuously buying electricity from the Government. User inputs weather information and plant capacity (average summer temperature, average winter temperature, annual precipitation, and average wind speed), EASE will automatically allocate energy source informations that can be utilized and provide suggestions on electricity generation sources.
