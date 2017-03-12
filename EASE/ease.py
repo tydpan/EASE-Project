@@ -269,18 +269,17 @@ def suggest(prec, ts, tw, ws, capacity):
     df = pd.DataFrame()
     if len(clean) == 0:
         capacity = min([conventional[1], capacity])
-        revenue_clean = None
+
+        result = plt.figure(figsize=(8, 8))
         revenue_conv = rev_plot(cost[conventional[2]], capacity, 'conventional', conventional[2])
         revenue_conv.title('Money Save using ' + conventional[2] + ' (capacity = ' + str(capacity) + ' Mwh)')
-        revenue_total = None
     else:
         if clean[1] >= capacity:
+            result = plt.figure(figsize=(8, 8))
             revenue_clean = rev_plot(cost[clean[2]], capacity, 'clean', clean[2])
             revenue_clean.title('Money Save using ' + clean[2] + ' (capacity = ' + str(capacity) + ' Mwh)')
-            revenue_conv = None
-            revenue_total = None
         else:
-            plt.figure(1, figsize=(15, 8))
+            result = plt.figure(1, figsize=(15, 8))
             plt.subplot(121)
             revenue_clean = rev_plot(cost[clean[2]], clean[1], 'clean',
                                      clean[2] + ' (capacity = ' + str(int(clean[1])) + ' Mwh)')
@@ -289,22 +288,20 @@ def suggest(prec, ts, tw, ws, capacity):
             revenue_total = rev_plot(cost[clean[2]], clean[1], 'total', 'Total (capacity = ' + str(capacity) + ' Mwh)',
                                      avg_cost_conv=cost[conventional[2]], capacity_conv=(capacity - clean[1]))
             revenue_total.title('Money Save using ' + clean[2] + ' Combined with ' + conventional[2])
-
-            conversion_to_co2 = 0
             for k in conventional:
                 if k in source_co2:
                     conversion_to_co2 = source_co2[k]
-
             print('Emitted Co2 using', conventional[2], 'is:',
                   int(capacity - clean[1]) * conversion_to_co2 * 0.000453592, 'metric tons')
-
             df['Year'] = [2016, 2050]
-            df['CO2_emission'] = [3587231, capacity - clean[1] * conversion_to_co2 * 0.000453592]
+            df['CO2_emission'] = [capacity * conversion_to_co2 * 0.000453592,
+                                  capacity - clean[1] * conversion_to_co2 * 0.000453592]
             plt.subplot(122)
-            co2_plot = plt.bar(df.Year, df.CO2_emission, width=12, color='#778899')
-            plt.xticks(df.Year, ('2016', '2050'))
-            plt.xlabel('Year')
+            co2_plot = plt.bar(df.Year, df.CO2_emission, width=12, color='#6495ED')
+            plt.xticks(df.Year, ('Pure Conventional', 'Conventional + Clean'))
+            plt.xlabel('Profiles')
             plt.ylabel('CO2 Emission (Metric Tons)')
             plt.grid(linestyle='dotted')
-            plt.title('CO2 Emission with ' + conventional[2])
-    return plt
+            plt.title('CO2 Emission Comparison Graph')
+#            autolabel(co2_plot)
+    return result
