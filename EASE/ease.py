@@ -249,11 +249,11 @@ def autolabel(rects):
     """
     Attach a text label above each bar displaying its values, or heights
     """
+    import matplotlib.pyplot as plt
+
     for rect in rects:
         height = rect.get_height()
-        plt.text(rect.get_x() + rect.get_width()/2., 1*height,
-                '%d' % int(height),
-                ha='center', va='bottom')
+        plt.text(rect.get_x() + rect.get_width()/2., 1*height, '%d' % int(height), ha='center', va='bottom')
     return
 
 
@@ -267,7 +267,6 @@ def suggest(prec, ts, tw, ws, capacity):
         clean revenue, and total revenue
     return clean revenue, conventional revenue, total revenue
     """
-    import pandas as pd
     import matplotlib.pyplot as plt
 
     source_co2 = {'Coal': 2133, 'Petro': 1700, 'NG': 1220}
@@ -312,6 +311,7 @@ def suggest(prec, ts, tw, ws, capacity):
             plt.xticks(co2_year, ('Pure Conventional', 'Conventional + Clean'))
             plt.xlabel('Profiles')
             plt.ylabel('CO2 Emission (Metric Tons)')
+            plt.ylim(co2_emission[1]/2)
             plt.grid(linestyle='dotted')
             plt.title('CO2 Emission Comparison Graph')
             autolabel(co2_plot)
