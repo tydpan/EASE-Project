@@ -307,11 +307,11 @@ def suggest(prec, ts, tw, ws, capacity):
             co2_emission = [capacity * conversion_to_co2 * 0.000453592,
                                   (capacity - clean[1]) * conversion_to_co2 * 0.000453592]
             plt.subplot(122)
-            co2_plot = plt.bar(co2_year, co2_emission, width=12, color='#6495ED')
+            co2_plot = plt.bar(co2_year, co2_emission, width=12, color='#6495ED', edgecolor='k', linewidth=1.5)
             plt.xticks(co2_year, ('Pure Conventional', 'Conventional + Clean'))
             plt.xlabel('Profiles')
             plt.ylabel('CO2 Emission (Metric Tons)')
-            plt.ylim(co2_emission[1]/2)
+            plt.ylim(co2_emission[1] * 2 / 3)
             plt.grid(linestyle='dotted')
             plt.title('CO2 Emission Comparison Graph')
             autolabel(co2_plot)
