@@ -110,6 +110,13 @@ def possible_type(avg_cap_list):
             p_value = (1 - p_value)
             possible_type_list.append(
                     [p_value, avg_cap_list[i], e_type[i]])
+        if 'Coal' in list(np.array(possible_type_list)[:,2]) or \
+            'NG' in list(np.array(possible_type_list)[:, 2]) or \
+            'Petro' in list(np.array(possible_type_list)[:, 2]):
+            pass
+        else:
+            possible_type_list.append(
+                [-1, avg_cap_list[0:3].max(), avg_cap_list.index(avg_cap_list[0:3].max())])
     return possible_type_list
 
 
@@ -258,6 +265,8 @@ def suggest(prec, ts, tw, ws, capacity):
     conventional = sort_and_pick(conventional)
     clean = sort_and_pick(clean)
     df = pd.DataFrame()
+    if len(conventional) == 0:
+
     if len(clean) == 0:
         capacity = min([conventional[1], capacity])
         revenue_clean = None
