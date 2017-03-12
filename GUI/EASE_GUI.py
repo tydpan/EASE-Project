@@ -4,6 +4,12 @@
 import tkinter as tk
 from tkinter import messagebox as mb
 
+import matplotlib
+matplotlib.use("TkAgg")
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+from matplotlib.figure import Figure
+
 import sys
 sys.path.append('../EASE')
 import ease
@@ -240,8 +246,28 @@ class MainPage(tk.Frame):
         self.check_value(controller)
         while self.n == True:
             print('Start')
+            result_page = tk.Toplevel(controller)
+            result_page.title('EASE Result')
+            """
             controller.result = ease.suggest(
                 controller.prec, controller.ts.get(), controller.tw.get(), controller.ws, controller.cap)
+
+            canvas = FigureCanvasTkAgg(controller.result, result_page)
+            canvas.show()
+#            canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+            """
+            f = plt.Figure(figsize=(4, 4))
+            ax = f.add_subplot(111)
+            ax.set_xlabel('Time(s)', fontsize=20)
+            ax.set_ylabel('Current(nA)', fontsize=20)
+            canvas = FigureCanvasTkAgg(f, result_page)
+            canvas.show()
+            canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=1)
+
+            toolbar1 = NavigationToolbar2TkAgg(canvas, result_page)
+            toolbar1.update()
+            f.tight_layout()
+
             print('Controller.result')
             break
 
