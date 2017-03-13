@@ -111,7 +111,10 @@ def possible_type(avg_cap_list):
             p_value = (1 - p_value)
             possible_type_list.append(
                     [p_value, avg_cap_list[i], e_type[i]])
-    if 'Coal' in list(np.array(possible_type_list)[:, 2]) or \
+    if len(possible_type_list) == 0:
+        possible_type_list.append(
+            [-1, max(avg_cap_list[0:3]), e_type[avg_cap_list.index(max(avg_cap_list[0:3]))]])
+    elif 'Coal' in list(np.array(possible_type_list)[:, 2]) or \
         'NG' in list(np.array(possible_type_list)[:, 2]) or \
         'Petro' in list(np.array(possible_type_list)[:, 2]):
         pass
