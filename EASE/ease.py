@@ -1,5 +1,5 @@
 #!/usr/bin/pythons
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 def rf(prec, ts, tw, ws):
