@@ -256,21 +256,26 @@ class MainPage(tk.Frame):
             canvas.show()
 #            canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
             """
-            f = plt.Figure(figsize=(4, 4))
+            """
+            f = plt.figure(figsize=(4, 4))
             ax = f.add_subplot(111)
             ax.set_xlabel('Time(s)', fontsize=20)
             ax.set_ylabel('Current(nA)', fontsize=20)
-            canvas = FigureCanvasTkAgg(f, result_page)
+            ax.plot()
+            """
+            controller.result = ease.suggest(
+                controller.prec, controller.ts.get(), controller.tw.get(), controller.ws, controller.cap)
+
+            canvas = FigureCanvasTkAgg(controller.result, result_page)
             canvas.show()
             canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=1)
 
             toolbar1 = NavigationToolbar2TkAgg(canvas, result_page)
             toolbar1.update()
-            f.tight_layout()
+            controller.result.tight_layout()
 
             print('Controller.result')
             break
-
 
 
 class Tooltip:
