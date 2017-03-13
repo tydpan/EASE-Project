@@ -330,7 +330,7 @@ class Tooltip:
         self.text = text
         self.widget.bind("<Enter>", self.onEnter)
         self.widget.bind("<Leave>", self.onLeave)
-        self.widget.bind("<ButtonPress>", self.onEnter)
+        self.widget.bind("<ButtonPress>", self.onLeave)
         self.bg = bg
         self.pad = pad
         self.id = None
