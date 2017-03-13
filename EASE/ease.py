@@ -314,7 +314,7 @@ def suggest(prec, ts, tw, ws, capacity):
             plt.xticks(co2_year, ('Pure Conventional', 'Conventional + Clean'))
             plt.xlabel('Profiles')
             plt.ylabel('CO2 Emission (Metric Tons)')
-            plt.ylim(co2_emission[1] * 0.95, co2_emission[0] * 1.02)
+            plt.ylim(co2_emission[1] * 0.98, co2_emission[0])
             plt.grid(linestyle='dotted')
             plt.title('CO2 Emission Comparison Graph')
             autolabel(co2_plot)
