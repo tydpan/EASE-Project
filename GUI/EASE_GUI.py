@@ -52,10 +52,17 @@ class License(tk.Frame):
         logo.pack(side='top')
 
         tk.Label(self, text='\nEASE_v1.0', highlightthickness=0, bd=0).pack(side='top')
-        tk.Label(self, text='Jiarong I. Cui, Tai-Yu D. Pan,\nJiayuan Guo, Yongquan Xie',
+        tk.Label(self, text='Jiarong I. Cui, Tai-Yu D. Pan,\nJiayuan Guo, Yongquan Xie\n',
                  highlightthickness=0, bd=0).pack(side='top')
 
-        text = tk.Text(self, width=50, height=10, wrap=tk.WORD)
+        text_frame = tk.Frame(self)
+        text_frame.pack()
+        text = tk.Text(text_frame, width=50, height=10, wrap=tk.WORD)
+        scrollbar = tk.Scrollbar(text_frame, orient="vertical", command=text.yview)
+        text.configure(yscrollcommand=scrollbar.set)
+        text.config(yscrollcommand=scrollbar.set)
+        scrollbar.pack(side="right", fill="y")
+        text.pack(side="left", fill="both", expand=True)
         text.insert('1.0',
                     'License :\n'
                     'This work is under GNU GPLv3 licence, such that it requires anyone who distributes this code or a '
@@ -66,7 +73,10 @@ class License(tk.Frame):
                     ' Directors for the DIRECT program at University of Washington, served as mentors for the'
                     ' development of this package.')
         text.config(state=tk.DISABLED)
-        text.pack()
+
+
+
+
 
         tk.Button(self, text='Quit', command=controller.destroy, highlightthickness=0, bd=0).pack(side='bottom')
         tk.Button(self, text='Agree', command=lambda: controller.show_frame(MainPage), highlightthickness=0,
