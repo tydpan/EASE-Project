@@ -24,21 +24,21 @@ class TEST_possible_type(unittest.TestCase):
         #test the type of output dataset
         self.assertIsInstance(output,list)
         
-        #calculate how many clean energy resource have been filtered
+        #calculate how many conventional energy resource have been filtered
         type_list = []
         for i in range(len(ease.possible_type(avg_cap_list))):
             type = ease.possible_type(avg_cap_list)[i][-1]
             type_list.append(type)
-            clean_ = ['Hydro', 'Solar', 'Wind']
+            conventional_ = ['Coal', 'NG', 'Petro']
         filtered = []
-        for i in clean_:
+        for i in conventional_:
             if i in type_list:
                 pass
             else:
                 filtered.append(i)
                 
         #test if all the clean resources have been filtered out
-        self.assertNotEqual(len(filtered),3)
+        self.assertLess(len(filtered),3)
 
 if __name__ == '__main__':
     unittest.main()
