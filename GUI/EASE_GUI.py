@@ -321,8 +321,7 @@ class MainPage(tk.Frame):
 
 
 class Tooltip:
-    def __init__(self, widget,
-                 *,
+    def __init__(self, widget, *,
                  bg='#FFFFEA',
                  pad=(5, 3, 5, 3),
                  text='widget info',
