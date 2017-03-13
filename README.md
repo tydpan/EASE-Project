@@ -1,4 +1,4 @@
-<img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/EASE_3.jpg" alt="...">
+<img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/EASE_Logo_Final.png" alt="...">
 EASE-Project_v1.0
 ====================
 
