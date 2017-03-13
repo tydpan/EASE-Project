@@ -73,7 +73,7 @@ Package Usage
 ----------------------
 For Mac:</p>
 Step 1: Open the terminal, type </p>
-    `python -- version`</p>
+    `python --version`</p>
 If it shows `Python 3.X.X`, skip step2 & 3.</p>
 Step 2: Install Homebrew, type</p>
     `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`</p>
