@@ -18,6 +18,7 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.wm_title('EASE')
+        self.wm_minsize(600, 430)
 
         container = tk.Frame(self)
         container.pack(side="top", fill="both", expand=True)
@@ -71,12 +72,14 @@ class MainPage(tk.Frame):
         self.temp_sum(controller)
         self.temp_wint(controller)
         self.precipitation()
-        self.wind_speed(controller)
+        self.wind_speed()
         self.capacity()
 
-        but = tk.Button(self.frame, text='try', command=lambda: self.ease_suggest(controller))
-        but.grid(row=0)
-
+        self.ease_but = tk.Button(self, text="Let's EASE (may take a while)", highlightthickness=0, bd=0,
+                                  command=lambda: self.avoid_double_click(controller))
+        self.ease_but.pack()
+        tk.Button(self, text='Quit', command=lambda: controller.quit(), highlightthickness=0,
+                  bd=0).pack()
 
     def try11(self, value):
         print(value)
@@ -153,7 +156,7 @@ class MainPage(tk.Frame):
     def get_prec(self, controller):
         controller.prec = self.prec_dict[self.prec.get()]
 
-    def wind_speed(self, controller):
+    def wind_speed(self):
         tk.Label(self.frame, text='Wind Speed:', highlightthickness=0, bd=0).grid(
             row=4, column=0, pady=5, padx=5, sticky='e')
         tk.Label(self.frame, text='( m/s )', highlightthickness=0, bd=0).grid(
@@ -242,10 +245,14 @@ class MainPage(tk.Frame):
                 break
             break
 
-    def ease_suggest(self, controller):
+    def ease_result(self, controller):
         self.check_value(controller)
+        self.ease_but.config(state=tk.DISABLED)
+        try:
+            controller.result.clear()
+        except:
+            pass
         while self.n == True:
-            print('Start')
             result_page = tk.Toplevel(controller)
             result_frame = tk.Frame(result_page)
             result_frame.pack()
@@ -268,11 +275,16 @@ class MainPage(tk.Frame):
                       bd=0).pack(side='bottom')
             tk.Button(button_frame, text='Close this window', command=result_page.destroy, highlightthickness=0,
                       bd=0).pack(side='bottom')
-
-
-            print('Controller.result')
             break
+        return
 
+    def avoid_double_click(self, controller):
+        self.ease_but.config(state=tk.DISABLED)
+        self.ease_but.update()
+        self.ease_result(controller)
+        self.ease_but.after(2000)
+        self.ease_but.config(state=tk.NORMAL)
+        self.ease_but
 
 class Tooltip:
     def __init__(self, widget,
