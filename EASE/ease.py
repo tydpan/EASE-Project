@@ -29,7 +29,7 @@ def rf(prec, ts, tw, ws):
     tree_num = 5000
     pred_list = []
     vote = {}
-    rfc = RandomForestClassifier(n_estimators=tree_num)
+    rfc = RandomForestClassifier(n_estimators=tree_num, n_jobs=-1)
     rfc.fit(train.iloc[:, 1:5], train.State)
 
     for i in range(tree_num):
