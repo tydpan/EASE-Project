@@ -86,8 +86,8 @@ and you should see `Python 3.6.0`. Type</p>
     `>>> exit()`</p>
 Step 4: Install dependencies, type</p>
     `$ brew tap homebrew/science`</p>
-    `$ brew install numpy scipy matplotlib pandaseq`</p>
-    `$ pip install scikit-learn`</p>
+    `$ brew install matplotlib pandaseq`</p>
+    `$ pip3 install numpy scipy scikit-learn`</p>
 Step 5: Get our package, type</p>
     `$ git clone https://github.com/danielfather7/EASE-Project.git`</p>
 Step 6: Change directory, type</p>
