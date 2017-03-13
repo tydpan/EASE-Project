@@ -56,7 +56,7 @@ Software Dependencies
 Numpy  [http://www.numpy.org/](http://www.numpy.org/)</p>
 Pandas  [http://pandas.pydata.org/](http://pandas.pydata.org/)</p>
 Scikit-Learn  [http://scikit-learn.org/stable/](http://scikit-learn.org/stable/)</p>
-Matplotlib [http://matplotlib.org)</p>
+Matplotlib  [http://matplotlib.org](http://matplotlib.org)</p>
 Tkinter a built-in package in Python
 
 **Operating system information**
