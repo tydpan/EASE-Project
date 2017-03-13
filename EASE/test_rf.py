@@ -21,10 +21,10 @@ class TEST_RF(unittest.TestCase):
         tw = test.iloc[0,3]
         ws = test.iloc[0,4]
         #test the type of input data
-        self.assertIsInstance(prec,np.float64)
-        self.assertIsInstance(ts,np.float64)
-        self.assertIsInstance(tw,np.float64)
-        self.assertIsInstance(ws,np.float64)
+        self.assertIsInstance(prec,(int,float))
+        self.assertIsInstance(ts,(int,float))
+        self.assertIsInstance(tw,(int,float))
+        self.assertIsInstance(ws,(int,float))
         #test the limitation of input temperature
         self.assertGreater(110, ts)
         self.assertGreater(ts, tw)
@@ -45,7 +45,7 @@ class TEST_RF(unittest.TestCase):
         self.assertIsInstance(output,dict)
         #test the output values
         for i in list(output.values()):
-            self.assertTrue(i < 1)
+            self.assertTrue(i <= 1)
             self.assertTrue(i > 0)
                 
 if __name__ == '__main__':
