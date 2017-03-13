@@ -276,6 +276,11 @@ class MainPage(tk.Frame):
                 self.n = False
                 mb.showerror(title='Error', message='Please choose a value of capacity.')
                 break
+            if controller.ts.get() < controller.tw.get():
+                self.n = False
+                mb.showerror(title='Error', message='Please insert correct values of summer temperature and and '
+                                                    'winter temperature.')
+                break
             break
 
     def ease_result(self, controller):
@@ -315,7 +320,7 @@ class MainPage(tk.Frame):
         self.ease_but.config(state=tk.DISABLED)
         self.ease_but.update()
         self.ease_result(controller)
-        self.ease_but.after(2000)
+        self.ease_but.after(1500)
         self.ease_but.config(state=tk.NORMAL)
         self.ease_but.update()
 
