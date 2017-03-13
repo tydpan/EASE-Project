@@ -1,8 +1,13 @@
 #!/usr/bin/pythons
 # -*- coding: utf-8 -*-
 
-import tkinter as tk
-from tkinter import messagebox as mb
+import sys
+if sys.version_info[0] < 3:
+    import Tkinter as tk     ## Python 2.x
+    import tkMessageBox as mb
+else:
+    import tkinter as tk     ## Python 3.x
+    from tkinter import messagebox as mb
 
 import webbrowser
 
@@ -10,7 +15,6 @@ import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
 
-import sys
 sys.path.append('../EASE')
 import ease
 
