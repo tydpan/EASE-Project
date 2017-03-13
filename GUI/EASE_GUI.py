@@ -1,5 +1,5 @@
 #!/usr/bin/pythons
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import tkinter as tk
 from tkinter import messagebox as mb
@@ -247,30 +247,31 @@ class MainPage(tk.Frame):
         while self.n == True:
             print('Start')
             result_page = tk.Toplevel(controller)
+            result_frame = tk.Frame(result_page)
+            result_frame.pack()
+            button_frame = tk.Frame(result_page)
+            button_frame.pack()
             result_page.title('EASE Result')
-            """
+
             controller.result = ease.suggest(
                 controller.prec, controller.ts.get(), controller.tw.get(), controller.ws, controller.cap)
 
-            canvas = FigureCanvasTkAgg(controller.result, result_page)
-            canvas.show()
-#            canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
-            """
-            f = plt.Figure(figsize=(4, 4))
-            ax = f.add_subplot(111)
-            ax.set_xlabel('Time(s)', fontsize=20)
-            ax.set_ylabel('Current(nA)', fontsize=20)
-            canvas = FigureCanvasTkAgg(f, result_page)
+            canvas = FigureCanvasTkAgg(controller.result, result_frame)
             canvas.show()
             canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=1)
 
-            toolbar1 = NavigationToolbar2TkAgg(canvas, result_page)
-            toolbar1.update()
-            f.tight_layout()
+            toolbar = NavigationToolbar2TkAgg(canvas, result_frame)
+            toolbar.update()
+            controller.result.tight_layout()
+
+            tk.Button(button_frame, text='Quit all', command=lambda: controller.quit(), highlightthickness=0,
+                      bd=0).pack(side='bottom')
+            tk.Button(button_frame, text='Close this window', command=result_page.destroy, highlightthickness=0,
+                      bd=0).pack(side='bottom')
+
 
             print('Controller.result')
             break
-
 
 
 class Tooltip:

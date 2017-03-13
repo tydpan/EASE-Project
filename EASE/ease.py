@@ -1,5 +1,5 @@
 #!/usr/bin/pythons
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 def rf(prec, ts, tw, ws):
@@ -26,7 +26,7 @@ def rf(prec, ts, tw, ws):
     warnings.filterwarnings('ignore')
 
     input_ = [prec, ts, tw, ws]
-    tree_num = 5000
+    tree_num = 500
     pred_list = []
     vote = {}
     rfc = RandomForestClassifier(n_estimators=tree_num)
@@ -245,6 +245,18 @@ def sort_and_pick(source_list):
     return ref
 
 
+def autolabel(rects):
+    """
+    Attach a text label above each bar displaying its values, or heights
+    """
+    import matplotlib.pyplot as plt
+
+    for rect in rects:
+        height = rect.get_height()
+        plt.text(rect.get_x() + rect.get_width()/2., 1*height, '%d' % int(height), ha='center', va='bottom')
+    return
+
+
 def suggest(prec, ts, tw, ws, capacity):
     """
     if no clean resource, clean revenue equals zero, calculate conventional capacity and plot revenue from conventional
@@ -255,7 +267,6 @@ def suggest(prec, ts, tw, ws, capacity):
         clean revenue, and total revenue
     return clean revenue, conventional revenue, total revenue
     """
-    import pandas as pd
     import matplotlib.pyplot as plt
 
     source_co2 = {'Coal': 2133, 'Petro': 1700, 'NG': 1220}
@@ -266,45 +277,42 @@ def suggest(prec, ts, tw, ws, capacity):
     conventional, clean = clean_or_conv(source_list)
     conventional = sort_and_pick(conventional)
     clean = sort_and_pick(clean)
-    df = pd.DataFrame()
     if len(clean) == 0:
         capacity = min([conventional[1], capacity])
-        revenue_clean = None
+
+        result = plt.figure(figsize=(5, 5))
         revenue_conv = rev_plot(cost[conventional[2]], capacity, 'conventional', conventional[2])
-        revenue_conv.title('Money Save using ' + conventional[2] + ' (capacity = ' + str(capacity) + ' Mwh)')
-        revenue_total = None
+        revenue_conv.title('Money Save using %s (capacity = %d Mwh)' % (conventional[2], capacity))
     else:
         if clean[1] >= capacity:
+            result = plt.figure(figsize=(5, 5))
             revenue_clean = rev_plot(cost[clean[2]], capacity, 'clean', clean[2])
-            revenue_clean.title('Money Save using ' + clean[2] + ' (capacity = ' + str(capacity) + ' Mwh)')
-            revenue_conv = None
-            revenue_total = None
+            revenue_clean.title('Money Save using %s (capacity = %d  Mwh)' % (clean[2], capacity))
         else:
-            plt.figure(1, figsize=(15, 8))
+            result = plt.figure(1, figsize=(11, 5))
             plt.subplot(121)
             revenue_clean = rev_plot(cost[clean[2]], clean[1], 'clean',
-                                     clean[2] + ' (capacity = ' + str(int(clean[1])) + ' Mwh)')
+                                     '%s (capacity = %d Mwh)' %  (clean[2], int(clean[1])))
             revenue_conv = rev_plot(cost[conventional[2]], (capacity - clean[1]), 'conventional',
-                                    conventional[2] + ' (capacity = ' + str(int(capacity - clean[1])) + ' Mwh)')
-            revenue_total = rev_plot(cost[clean[2]], clean[1], 'total', 'Total (capacity = ' + str(capacity) + ' Mwh)',
+                                    '%s (capacity = %d Mwh)' %  (conventional[2], int(capacity - clean[1])))
+            revenue_total = rev_plot(cost[clean[2]], clean[1], 'total', 'Total (capacity = %d Mwh)' % capacity,
                                      avg_cost_conv=cost[conventional[2]], capacity_conv=(capacity - clean[1]))
-            revenue_total.title('Money Save using ' + clean[2] + ' Combined with ' + conventional[2])
-
-            conversion_to_co2 = 0
+            revenue_total.title('Money Save using %s Combined with %s' % (clean[2], conventional[2]))
             for k in conventional:
                 if k in source_co2:
                     conversion_to_co2 = source_co2[k]
-
-            print('Emitted Co2 using', conventional[2], 'is:',
-                  int(capacity - clean[1]) * conversion_to_co2 * 0.000453592, 'metric tons')
-
-            df['Year'] = [2016, 2050]
-            df['CO2_emission'] = [3587231, capacity - clean[1] * conversion_to_co2 * 0.000453592]
+#            print('Emitted Co2 using', conventional[2], 'is:',
+#                  int(capacity - clean[1]) * conversion_to_co2 * 0.000453592, 'metric tons')
+            co2_year = [2016, 2050]
+            co2_emission = [capacity * conversion_to_co2 * 0.000453592,
+                                  (capacity - clean[1]) * conversion_to_co2 * 0.000453592]
             plt.subplot(122)
-            co2_plot = plt.bar(df.Year, df.CO2_emission, width=12, color='#778899')
-            plt.xticks(df.Year, ('2016', '2050'))
-            plt.xlabel('Year')
+            co2_plot = plt.bar(co2_year, co2_emission, width=12, color='#6495ED', edgecolor='k', linewidth=1.5)
+            plt.xticks(co2_year, ('Pure Conventional', 'Conventional + Clean'))
+            plt.xlabel('Profiles')
             plt.ylabel('CO2 Emission (Metric Tons)')
+            plt.ylim(co2_emission[1] * 2 / 3)
             plt.grid(linestyle='dotted')
-            plt.title('CO2 Emission with ' + conventional[2])
-    return plt
+            plt.title('CO2 Emission Comparison Graph')
+            autolabel(co2_plot)
+    return result
