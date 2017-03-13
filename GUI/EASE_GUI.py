@@ -321,7 +321,8 @@ class MainPage(tk.Frame):
 
 
 class Tooltip:
-    def __init__(self, widget, *, bg='#FFFFEA', pad=(5, 3, 5, 3), text='widget info', waittime=400, wraplength=250):
+    def __init__(self, widget, *, bg='#FFFFEA', pad=(5, 3, 5, 3),
+                 text='widget info', waittime=400, wraplength=250):
 
         self.waittime = waittime  # in miliseconds, originally 500
         self.wraplength = wraplength  # in pixels, originally 180
