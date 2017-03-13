@@ -3,10 +3,10 @@
 
 import sys
 if sys.version_info[0] < 3:
-    import Tkinter as tk     ## Python 2.x
+    import Tkinter as tk     # Python 2.x
     import tkMessageBox as mb
 else:
-    import tkinter as tk     ## Python 3.x
+    import tkinter as tk     # Python 3.x
     from tkinter import messagebox as mb
 
 import webbrowser
@@ -17,6 +17,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 
 sys.path.append('../EASE')
 import ease
+
 
 class App(tk.Tk):
     def __init__(self):
@@ -81,7 +82,7 @@ class License(tk.Frame):
         tk.Label(self, text='\nPlease visit our website for more information: ',
                  highlightthickness=0, bd=0).pack()
         website = tk.Label(self, text='https://github.com/danielfather7/EASE-Project',
-                 highlightthickness=0, bd=0, fg='blue',font="Verdana 12 underline")
+                           highlightthickness=0, bd=0, fg='blue', font="Verdana 12 underline")
         website.pack()
         website.bind("<Button-1>", lambda x: webbrowser.open_new(r"https://github.com/danielfather7/EASE-Project"))
         website.bind("<Enter>", lambda x: website.configure(fg='red'))
