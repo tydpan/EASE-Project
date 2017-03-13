@@ -4,11 +4,11 @@
 import tkinter as tk
 from tkinter import messagebox as mb
 
+import webbrowser
+
 import matplotlib
 matplotlib.use("TkAgg")
-import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
-from matplotlib.figure import Figure
 
 import sys
 sys.path.append('../EASE')
@@ -57,7 +57,7 @@ class License(tk.Frame):
 
         text_frame = tk.Frame(self)
         text_frame.pack()
-        text = tk.Text(text_frame, width=50, height=10, wrap=tk.WORD)
+        text = tk.Text(text_frame, width=50, height=8, wrap=tk.WORD)
         scrollbar = tk.Scrollbar(text_frame, orient="vertical", command=text.yview)
         text.configure(yscrollcommand=scrollbar.set)
         text.config(yscrollcommand=scrollbar.set)
@@ -74,8 +74,12 @@ class License(tk.Frame):
                     ' development of this package.')
         text.config(state=tk.DISABLED)
 
-
-
+        tk.Label(self, text='\nPlease visit our website for more information: ',
+                 highlightthickness=0, bd=0).pack()
+        website = tk.Label(self, text='https://github.com/danielfather7/EASE-Project',
+                 highlightthickness=0, bd=0, fg='blue',font="Verdana 12 underline")
+        website.pack()
+        website.bind("<Button-1>", lambda x: webbrowser.open_new(r"https://github.com/danielfather7/EASE-Project"))
 
 
         tk.Button(self, text='Quit', command=controller.destroy, highlightthickness=0, bd=0).pack(side='bottom')
