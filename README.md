@@ -48,14 +48,16 @@ Database Sources
 EASE cost prediction is largely based on 2015 average plant construction cost data, this includes but not limited to installation cost, maintenance cost,  operation cost, and electricity sale price. Carbon dioxide taxation is based on a 2013 proposed legislation (S. 332 of the 113th) 
 
 -----------------------
-Software Depedencies
+Software Dependencies
 -----------------------
 **Package is written in Python 3.x version**</p>
 **All the required software is open source.**
 
 Numpy  [http://www.numpy.org/](http://www.numpy.org/)</p>
 Pandas  [http://pandas.pydata.org/](http://pandas.pydata.org/)</p>
-Scikit-Learn  [http://scikit-learn.org/stable/](http://scikit-learn.org/stable/)
+Scikit-Learn  [http://scikit-learn.org/stable/](http://scikit-learn.org/stable/)</p>
+Matplotlib [http://matplotlib.org]</p>
+Tkinter a built-in package in Python
 
 **Operating system information**
 
