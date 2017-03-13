@@ -85,7 +85,7 @@ Once Python 3 is installed, we’re going to check that is it ready to use or ou
 and you should see `Python 3.6.0`. Type</p>
     `exit()`</p>
 Step 4: Install dependencies, type</p>
-    `brew install matplotlib numpy pandas scikit-learn scipy`</p>
+    `brew install gfortran pkg-config matplotlib numpy pandas scikit-learn scipy`</p>
 Step 5: Get our package, type</p>
     `git clone https://github.com/danielfather7/EASE-Project.git`</p>
 Step 6: Change directory, type</p>

@@ -321,7 +321,7 @@ class MainPage(tk.Frame):
 
 
 class Tooltip:
-    def __init__(self, widget, *, bg='#FFFFEA', pad=(5, 3, 5, 3),
+    def __init__(self, widget, bg='#FFFFEA', pad=(5, 3, 5, 3),
                  text='widget info', waittime=400, wraplength=250):
 
         self.waittime = waittime  # in miliseconds, originally 500
@@ -356,7 +356,7 @@ class Tooltip:
             self.widget.after_cancel(id_)
 
     def show(self):
-        def tip_pos_calculator(widget, label, *, tip_delta=(10, 5), pad=(5, 3, 5, 3)):
+        def tip_pos_calculator(widget, label, tip_delta=(10, 5), pad=(5, 3, 5, 3)):
 
             w = widget
 
