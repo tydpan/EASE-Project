@@ -69,13 +69,13 @@ To be filled soon.
 ----------------------
 Package Usage
 ----------------------
-For Mac, Linux, and Windows:
-Step 1: Open the terminal, type in
-    `git clone https://github.com/danielfather7/EASE-Project.git`
-Step 2: Type in
-    `cd EASE-Project/GUI/`
-Step 3: Type in
-    `python EASE_GUI.py`
+For Mac, Linux, and Windows:</p>
+Step 1: Open the terminal, type in</p>
+    `git clone https://github.com/danielfather7/EASE-Project.git`</p>
+Step 2: Type in</p>
+    `cd EASE-Project/GUI/`</p>
+Step 3: Type in</p>
+    `python EASE_GUI.py`</p>
 Enjoy!
 
 ---------
