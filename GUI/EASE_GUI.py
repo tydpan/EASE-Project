@@ -51,7 +51,18 @@ class License(tk.Frame):
         logo.image = self.image
         logo.pack(side='top')
 
-        tk.Label(self, text='License page', highlightthickness=0, bd=0).pack(side='top')
+        tk.Label(self, text='EASE_v1.0', highlightthickness=0, bd=0).pack(side='top')
+        tk.Label(self, text='Jiarong I. Cui(1), Tai-Yu D. Pan(1),\nJiayuan Guo(1), Yongquan Xie(2)',
+                 highlightthickness=0, bd=0).pack(side='top')
+
+        text = tk.Text(self, width=50, height=10, wrap=tk.WORD)
+        text.insert('1.0',
+                    'License\n'
+                    'This work is under GNU GPLv3 licence, such that it requires anyone who distributes this code or a '
+                    'derivative work to make the source available under the same terms, and also provides an express '
+                    'grant of patent rights from contributors to users.')
+        text.config(state=tk.DISABLED)
+        text.pack()
 
         tk.Button(self, text='Quit', command=controller.destroy, highlightthickness=0, bd=0).pack(side='bottom')
         tk.Button(self, text='Agree', command=lambda: controller.show_frame(MainPage), highlightthickness=0,
