@@ -26,7 +26,7 @@ def rf(prec, ts, tw, ws):
     warnings.filterwarnings('ignore')
 
     input_ = [prec, ts, tw, ws]
-    tree_num = 500
+    tree_num = 5000
     pred_list = []
     vote = {}
     rfc = RandomForestClassifier(n_estimators=tree_num)
@@ -283,15 +283,13 @@ def suggest(prec, ts, tw, ws, capacity):
         result = plt.figure(figsize=(5, 5))
         revenue_conv = rev_plot(cost[conventional[2]], capacity, 'conventional', conventional[2])
         revenue_conv.title('Money Save using %s (capacity = %d Mwh)' % (conventional[2], capacity))
-        result.show()
     else:
         if clean[1] >= capacity:
             result = plt.figure(figsize=(5, 5))
             revenue_clean = rev_plot(cost[clean[2]], capacity, 'clean', clean[2])
             revenue_clean.title('Money Save using %s (capacity = %d  Mwh)' % (clean[2], capacity))
-            result.show()
         else:
-            result = plt.figure(1, figsize=(11, 5))
+            result = plt.figure(1, figsize=(12, 5))
             plt.subplot(121)
             revenue_clean = rev_plot(cost[clean[2]], clean[1], 'clean',
                                      '%s (capacity = %d Mwh)' %  (clean[2], int(clean[1])))
@@ -317,5 +315,4 @@ def suggest(prec, ts, tw, ws, capacity):
             plt.grid(linestyle='dotted')
             plt.title('CO2 Emission Comparison Graph')
             autolabel(co2_plot)
-            result.show()
     return result
