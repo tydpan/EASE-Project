@@ -73,25 +73,25 @@ Package Usage
 ----------------------
 For Mac:</p>
 Step 1: Open the terminal, type </p>
-    `python --version`</p>
+    `$ python --version`</p>
 If it shows `Python 3.X.X`, skip step 2 & 3.</p>
 Step 2: Install Homebrew, type</p>
-    `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`</p>
+    `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`</p>
 For more information, visit [Homebrew](https://brew.sh).</p>
 Step 3: Use Homebrew to update python, type</p>
-    `brew install python3`</p>
+    `$ brew install python3`</p>
 Once Python 3 is installed, we’re going to check that is it ready to use or our system by launching the interactive console. Type</p>
-    `python3`</p>
+    `$ python3`</p>
 and you should see `Python 3.6.0`. Type</p>
-    `exit()`</p>
+    `>>> exit()`</p>
 Step 4: Install dependencies, type</p>
-    `brew install gfortran pkg-config matplotlib numpy pandas scikit-learn scipy`</p>
+    `$ brew install gfortran pkg-config matplotlib numpy pandas scikit-learn scipy`</p>
 Step 5: Get our package, type</p>
-    `git clone https://github.com/danielfather7/EASE-Project.git`</p>
+    `$ git clone https://github.com/danielfather7/EASE-Project.git`</p>
 Step 6: Change directory, type</p>
-    `cd EASE-Project/GUI/`</p>
+    `$ cd EASE-Project/GUI/`</p>
 Step 7: Open our package, type</p>
-    `python3 EASE_GUI.py`</p>
+    `$ python3 EASE_GUI.py`</p>
 Enjoy!
 
 ---------
