@@ -18,7 +18,7 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.wm_title('EASE')
-        self.wm_minsize(600, 430)
+        self.wm_minsize(600, 490)
 
         container = tk.Frame(self)
         container.pack(side="top", fill="both", expand=True)
@@ -80,7 +80,10 @@ class License(tk.Frame):
                  highlightthickness=0, bd=0, fg='blue',font="Verdana 12 underline")
         website.pack()
         website.bind("<Button-1>", lambda x: webbrowser.open_new(r"https://github.com/danielfather7/EASE-Project"))
+        website.bind("<Enter>", lambda x: website.configure(fg='red'))
+        website.bind("<Leave>", lambda x: website.configure(fg='blue'))
 
+        tk.Label(self, text=' ', highlightthickness=0, bd=0).pack()
 
         tk.Button(self, text='Quit', command=controller.destroy, highlightthickness=0, bd=0).pack(side='bottom')
         tk.Button(self, text='Agree', command=lambda: controller.show_frame(MainPage), highlightthickness=0,
@@ -92,6 +95,7 @@ class MainPage(tk.Frame):
         super().__init__(parent)
 
         self.logo()
+        tk.Label(self, text=' ', highlightthickness=0, bd=0).pack()
 
         # frame for widgets
         self.frame = tk.Frame(self)
@@ -232,6 +236,7 @@ class MainPage(tk.Frame):
         ref = tk.Label(self.scale_frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline",
                        foreground='blue')
         ref.grid(row=0, column=1, pady=5, padx=5, sticky='e')
+        tk.Label(self.scale_frame, text=' ', highlightthickness=0, bd=0).grid(row=1)
         Tooltip(ref, text=text, wraplength=500)
 
     def get_cap(self, controller):
