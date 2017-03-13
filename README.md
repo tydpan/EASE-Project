@@ -74,11 +74,11 @@ Package Usage
 **For Mac:**</p>
 Step 1: Open the terminal, type </p>
     `$ python --version`</p>
-If it shows `Python 3.X.X`, skip step 2 & 3.</p>
+If your Python version is `Python 3.5.0` or later, skip step 2 & 3.</p>
 Step 2: Install Homebrew, type</p>
     `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`</p>
 For more information, visit [Homebrew](https://brew.sh).</p>
-Step 3: Use Homebrew to update python, type</p>
+Step 3: Use Homebrew to install Python, type</p>
     `$ brew install python3`</p>
 Once Python 3 is installed, we’re going to check that is it ready to use or our system by launching the interactive console. Type</p>
     `$ python3`</p>
