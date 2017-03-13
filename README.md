@@ -74,7 +74,7 @@ Package Usage
 For Mac:</p>
 Step 1: Open the terminal, type </p>
     `python --version`</p>
-If it shows `Python 3.X.X`, skip step2 & 3.</p>
+If it shows `Python 3.X.X`, skip step 2 & 3.</p>
 Step 2: Install Homebrew, type</p>
     `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`</p>
 For more information, visit [Homebrew](https://brew.sh).</p>
@@ -91,7 +91,7 @@ Step 5: Get our package, type</p>
 Step 6: Change directory, type</p>
     `cd EASE-Project/GUI/`</p>
 Step 7: Open our package, type</p>
-    `python EASE_GUI.py`</p>
+    `python3 EASE_GUI.py`</p>
 Enjoy!
 
 ---------
