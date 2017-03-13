@@ -317,7 +317,8 @@ class MainPage(tk.Frame):
         self.ease_result(controller)
         self.ease_but.after(2000)
         self.ease_but.config(state=tk.NORMAL)
-        self.ease_but
+        self.ease_but.update()
+
 
 class Tooltip:
     def __init__(self, widget,
@@ -360,9 +361,7 @@ class Tooltip:
             self.widget.after_cancel(id_)
 
     def show(self):
-        def tip_pos_calculator(widget, label,
-                               *,
-                               tip_delta=(10, 5), pad=(5, 3, 5, 3)):
+        def tip_pos_calculator(widget, label, *, tip_delta=(10, 5), pad=(5, 3, 5, 3)):
 
             w = widget
 
