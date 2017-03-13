@@ -51,16 +51,20 @@ class License(tk.Frame):
         logo.image = self.image
         logo.pack(side='top')
 
-        tk.Label(self, text='EASE_v1.0', highlightthickness=0, bd=0).pack(side='top')
-        tk.Label(self, text='Jiarong I. Cui(1), Tai-Yu D. Pan(1),\nJiayuan Guo(1), Yongquan Xie(2)',
+        tk.Label(self, text='\nEASE_v1.0', highlightthickness=0, bd=0).pack(side='top')
+        tk.Label(self, text='Jiarong I. Cui, Tai-Yu D. Pan,\nJiayuan Guo, Yongquan Xie',
                  highlightthickness=0, bd=0).pack(side='top')
 
         text = tk.Text(self, width=50, height=10, wrap=tk.WORD)
         text.insert('1.0',
-                    'License\n'
+                    'License :\n'
                     'This work is under GNU GPLv3 licence, such that it requires anyone who distributes this code or a '
                     'derivative work to make the source available under the same terms, and also provides an express '
-                    'grant of patent rights from contributors to users.')
+                    'grant of patent rights from contributors to users.\n'
+                    '\nAcknowledgements:\n'
+                    'David A. Beck and Jim Pfaendtner, eScience Institue, Chemical Engineering Department, as well as'
+                    ' Directors for the DIRECT program at University of Washington, served as mentors for the'
+                    ' development of this package.')
         text.config(state=tk.DISABLED)
         text.pack()
 
