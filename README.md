@@ -67,9 +67,16 @@ Unittest Results
 To be filled soon.
 
 ----------------------
-Software Installation
+Package Usage
 ----------------------
-To be filled soon.
+For Mac, Linux, and Windows:
+Step 1: Open the terminal, type in
+    `git clone https://github.com/danielfather7/EASE-Project.git`
+Step 2: Type in
+    `cd EASE-Project/GUI/`
+Step 3: Type in
+    `python EASE_GUI.py`
+Enjoy!
 
 ---------
 Folders
