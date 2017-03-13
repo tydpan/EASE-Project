@@ -119,12 +119,6 @@ class MainPage(tk.Frame):
         tk.Button(self, text='Quit', command=lambda: controller.quit(), highlightthickness=0,
                   bd=0).pack()
 
-    def try11(self, value):
-        print(value)
-
-    def try3(self, controller):
-        print(controller.prec)
-
     def logo(self):
         logo_frame = tk.Frame(self)
         logo_frame.pack()
