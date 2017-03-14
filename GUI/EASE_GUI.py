@@ -165,11 +165,13 @@ class MainPage(tk.Frame):
         tk.Label(self.frame, text='( inch\u00B3/cm\u00B2 )', highlightthickness=0, bd=0).grid(
             row=3, column=1, pady=5, padx=5, sticky='e')
 
-        text = 'Eg:\nThe winter temperature in New York is about 30 \u2109, suitable to wear coat.'
+        text = 'Eg:\nWashington was the leading producer of electricity from hydroelectric sources. In 2015, the ' \
+               'total monthly precipitation in Washington is 2.52 inch\u00B3/cm\u00B2, and it rains about 172.5 days' \
+               ' annually, which can be classed as “half of the time”.'
         ref = tk.Label(self.frame, text='Ref.', highlightthickness=0, bd=0, font="Verdana 12 underline",
                        foreground='blue')
         ref.grid(row=3, column=2, pady=5, padx=5, sticky='e')
-        Tooltip(ref, text=text, wraplength=200)
+        Tooltip(ref, text=text, wraplength=300)
 
         self.prec = tk.StringVar()
         self.prec.set('Anticipated annual rain fall :')
