@@ -162,7 +162,7 @@ class MainPage(tk.Frame):
     def precipitation(self):
         tk.Label(self.frame, text='Precipitation:', highlightthickness=0, bd=0).grid(
             row=3, column=0, pady=5, padx=5, sticky='e')
-        tk.Label(self.frame, text='( inch )', highlightthickness=0, bd=0).grid(
+        tk.Label(self.frame, text='( inch\u00B3/cm\u00B2 )', highlightthickness=0, bd=0).grid(
             row=3, column=1, pady=5, padx=5, sticky='e')
 
         text = 'Eg:\nThe winter temperature in New York is about 30 \u2109, suitable to wear coat.'
