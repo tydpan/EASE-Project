@@ -61,6 +61,10 @@ def avg_capacity(vote):
     This function is to do weighted average of
     capacity per plant in each state based on our
     RandomForest classifier's result.
+    
+    input = The reutrned dictionary based result from rf function, this vote dictionary contains the states, and 
+            their corresponding votes when outputing a RF predition.
+    output = The output of avg_capacity is a list of values, that are calculated based on vote and capacity database.
     """
     path = os.path.dirname(__file__)
     path = os.path.join(path, 'Arranged_Data', 'average_plant_capacity.csv')
