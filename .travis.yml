@@ -7,13 +7,13 @@ sudo: false
 
 # command to install dependencies
 install:
-  - travis_retry python setup.py dev
+  - "pip install ."
   - "pip install -r requirements.txt"
 
 
 # command to run tests
 script:
-  - py.test
+  - "nosetests"
 
 notifications:
   email: false
