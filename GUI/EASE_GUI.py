@@ -15,8 +15,7 @@ import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
 
-sys.path.append('../EASE')
-import ease
+import EASE.ease as ease
 
 
 class App(tk.Tk):

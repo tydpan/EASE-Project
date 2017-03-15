@@ -9,6 +9,8 @@ import numpy as np
 from scipy import stats
 import matplotlib.pyplot as plt
 
+import os
+
 
 def rf(prec, ts, tw, ws):
     """
@@ -21,7 +23,8 @@ def rf(prec, ts, tw, ws):
        vote  = dictionary based output that contains the RF classified states,
                and each states frequency.
     """
-    train = pd.read_csv('../Arranged_Data/final_weater.csv')[[
+    path = os.path.join(os.path.abspath('..'), 'Arranged_Data', 'final_weater.csv')
+    train = pd.read_csv(path)[[
             'State', 'TotalMonthlyPrecip', 'TempSummer',
             'TempWinter', 'Avgwindspeed']]
     train = train[train.State != 'DC']
@@ -58,8 +61,8 @@ def avg_capacity(vote):
     capacity per plant in each state based on our
     RandomForest classifier's result.
     """
-    average_plant_capacity = pd.read_csv(
-            '../Arranged_Data/average_plant_capacity.csv')
+    path = os.path.join(os.path.abspath('..'), 'Arranged_Data', 'average_plant_capacity.csv')
+    average_plant_capacity = pd.read_csv(path)
     coal_sum = 0
     ng_sum = 0
     petro_sum = 0
@@ -88,7 +91,8 @@ def possible_type(avg_cap_list):
     p value calculation, comparing to USA average and
     significance level (alpha) = 0.05.
     """
-    cap_pop = pd.read_csv('../Arranged_Data/average_plant_capacity.csv')
+    path = os.path.join(os.path.abspath('..'), 'Arranged_Data', 'average_plant_capacity.csv')
+    cap_pop = pd.read_csv(path)
     e_type = ['Coal', 'NG', 'Petro', 'Hydro', 'Solar', 'Wind']
     possible_type_list = []
     for i in range(len(e_type)):
@@ -149,7 +153,8 @@ def rev_plot(avg_cost, capacity, e_type, label, avg_cost_conv=0, capacity_conv=0
     return plot
     """
     revenue = 0
-    esales = pd.read_csv('../Arranged_Data/Cost/Sale_CO2_tax.csv', skiprows=1, names=['Year', 'Sale', 'CO2_tax'])
+    path = os.path.join(os.path.abspath('..'), 'Arranged_Data', 'Cost', 'Sale_CO2_tax.csv')
+    esales = pd.read_csv(path, skiprows=1, names=['Year', 'Sale', 'CO2_tax'])
     if e_type == 'conventional':
         revenue = (esales.Sale - esales.CO2_tax - avg_cost) * capacity / 1e6
     elif e_type == 'clean':
@@ -175,6 +180,7 @@ def avg_cost(vote):
     creat a dictionary to store average cost for each type of resource
     return average cost dictionary
     """
+    path = os.path.join(os.path.abspath('..'), 'Arranged_Data', 'Cost', 'df_cost.csv')
     cost = pd.read_csv('../Arranged_Data/Cost/df_cost.csv')
     coal_sum = 0
     ng_sum = 0
