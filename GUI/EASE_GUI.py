@@ -134,6 +134,7 @@ class MainPage(tk.Frame):
         logo.pack()
 
     def temp_sum(self, controller):
+        """Temperature (summer) GUI interactive parameters defined."""
         tk.Label(self.frame, text='Average Temperature in Summer:', highlightthickness=0, bd=0).grid(
             row=1, column=0, pady=5, padx=5, sticky='e')
         tk.Label(self.frame, text='( \u2109 )', highlightthickness=0, bd=0).grid(
@@ -150,6 +151,7 @@ class MainPage(tk.Frame):
             row=1, column=3, pady=5, padx=5, sticky='w')
 
     def temp_wint(self, controller):
+        """Temperature (winter) GUI interactive parameters defined."""
         tk.Label(self.frame, text='Average Temperature in Winter:', highlightthickness=0, bd=0).grid(
             row=2, column=0, pady=5, padx=5, sticky='e')
         tk.Label(self.frame, text='( \u2109 )', highlightthickness=0, bd=0).grid(
@@ -166,6 +168,7 @@ class MainPage(tk.Frame):
             row=2, column=3, pady=5, padx=5, sticky='w')
 
     def precipitation(self):
+        """Precipitataion GUI interactive parameters defined."""
         tk.Label(self.frame, text='Precipitation:', highlightthickness=0, bd=0).grid(
             row=3, column=0, pady=5, padx=5, sticky='e')
         tk.Label(self.frame, text='( inch\u00B3/cm\u00B2 )', highlightthickness=0, bd=0).grid(
@@ -194,9 +197,11 @@ class MainPage(tk.Frame):
         om.config(width=25)
 
     def get_prec(self, controller):
+        """Separate functions to intake user input precipiation parameters."""
         controller.prec = self.prec_dict[self.prec.get()]
 
     def wind_speed(self):
+        """Windspeed GUI interactive parameters defined."""
         tk.Label(self.frame, text='Wind Speed:', highlightthickness=0, bd=0).grid(
             row=4, column=0, pady=5, padx=5, sticky='e')
         tk.Label(self.frame, text='( m/s )', highlightthickness=0, bd=0).grid(
@@ -224,9 +229,11 @@ class MainPage(tk.Frame):
         om.config(width=25)
 
     def get_ws(self, controller):
+        """Separate functions to intake user input windspeed parameters."""
         controller.ws = self.ws_dict[self.ws.get()]
 
     def capacity(self):
+        """capacity GUI interactive parameters defined."""
         self.scale_frame = tk.Frame(self)
         self.scale_frame.pack()
 
@@ -247,9 +254,11 @@ class MainPage(tk.Frame):
         Tooltip(ref, text=text, wraplength=500)
 
     def get_cap(self, controller):
+        """Separate functions to intake user input capacity parameters."""
         controller.cap = self.cap.get() * 1000
 
     def check_value(self, controller):
+        """Checker added to warm users certain values have not been input to ensure EASE run smoothly."""
         self.get_prec(controller)
         self.get_ws(controller)
         self.get_cap(controller)
