@@ -1,12 +1,10 @@
 <img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/EASE_Logo_Final.png" alt="...">
-EASE-Project_v1.0
+**EASE-Project_v1.0**
 ====================
-<img src="https://travis-ci.org/danielfather7/EASE-Project.svg?branch=master">
-(https://travis-ci.org/danielfather7/EASE-Project)
-</p>[![Build Status](https://travis-ci.org/danielfather7/EASE-Project.svg?branch=master)](https://travis-ci.org/danielfather7/EASE-Project)</p>
+</p>[<img src="https://travis-ci.org/danielfather7/EASE-Project.svg?branch=master">](https://travis-ci.org/danielfather7/EASE-Project)</p>
 ------------------------
 Background and Objective
-----------------------
+------------------------
 
 Electricity is main source of energy across the globe, such that electricity generation based on conventional energy sources (Petroleum, Coal, and Natrual Gas) are accompanied with large amount of grean house gas emission, particularly the carbon dioxide gas. The figure below mapped out the electricity generation plant with different types of energy sources within the United States in year 2015.
 
