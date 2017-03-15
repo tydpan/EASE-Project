@@ -20,6 +20,7 @@ import EASE.ease as ease
 
 class App(tk.Tk):
     def __init__(self):
+        """This function initialized the GUI interface, and defines the pop out windwos frame"""
         super().__init__()
         self.wm_title('EASE')
         self.wm_minsize(600, 490)
@@ -42,12 +43,16 @@ class App(tk.Tk):
         self.show_frame(License)
 
     def show_frame(self, frame_):
+        """Fnuction to show GUI frame work."""
         frame = self.frames[frame_]
         frame.tkraise()
 
 
 class License(tk.Frame):
     def __init__(self, parent, controller):
+        """Defines first page of the GUI interface, display author names and license details within the first 
+            function defined pop-out window.
+        """
         super().__init__(parent)
 
         self.image = tk.PhotoImage(file='EASE.gif')
@@ -96,6 +101,7 @@ class License(tk.Frame):
 
 class MainPage(tk.Frame):
     def __init__(self, parent, controller):
+        """Define interactive page, and utilized tk widgets for interactive parameters control."""
         super().__init__(parent)
 
         self.logo()
@@ -119,6 +125,7 @@ class MainPage(tk.Frame):
                   bd=0).pack()
 
     def logo(self):
+        """Function to import logo."""
         logo_frame = tk.Frame(self)
         logo_frame.pack()
         self.image = tk.PhotoImage(file='EASE.gif')
