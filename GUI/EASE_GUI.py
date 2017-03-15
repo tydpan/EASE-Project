@@ -301,6 +301,7 @@ class MainPage(tk.Frame):
             break
 
     def ease_result(self, controller):
+        """EASE result pop out windows defined."""
         self.check_value(controller)
         self.ease_but.config(state=tk.DISABLED)
         try:
@@ -343,6 +344,7 @@ class MainPage(tk.Frame):
 
 
 class Tooltip:
+    """Tool tip function define, most functions automatically comes with tk packages."""
     def __init__(self, widget, bg='#FFFFEA', pad=(5, 3, 5, 3),
                  text='widget info', waittime=400, wraplength=250):
 
@@ -378,6 +380,8 @@ class Tooltip:
             self.widget.after_cancel(id_)
 
     def show(self):
+        """Function to calculate the cursor position within the EASE output graph, and returns a small temporary windows
+            to show user the x and y information of the cursor within the output graph."""
         def tip_pos_calculator(widget, label, tip_delta=(10, 5), pad=(5, 3, 5, 3)):
 
             w = widget
