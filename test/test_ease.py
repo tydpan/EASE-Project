@@ -1,10 +1,8 @@
 import unittest
 import pandas as pd
 
-"""
 import sys
-sys.path.append('../EASE')
-"""
+sys.path.append('..')
 import EASE.ease as ease
 
 import os
