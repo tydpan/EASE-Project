@@ -112,6 +112,8 @@ Folders
 
 **GUI** -  The folder contains GUI development code.
 
+**Test** - The folder contains unittest codes.
+
 **README.md** - descrption of background, License, Database Sources, Unittest, Software Installation, Folder Descriptions and Acknowledgement
 
 **LICENSE.md** - Outlines of the GPL-3.0 license for this package.
