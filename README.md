@@ -1,7 +1,7 @@
 <img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/EASE_Logo_Final.png" alt="...">
 EASE-Project_v1.0
 ====================
-
+https://travis-ci.org/danielfather7/EASE-Project.svg?branch=master
 ------------------------
 Background and Objective
 ----------------------
