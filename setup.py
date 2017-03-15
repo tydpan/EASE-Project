@@ -1,10 +1,4 @@
 from distutils.core import setup
-import os
-
-
-datadir = os.path.join('share','data')
-datafiles = [(d, [os.path.join(d,f) for f in files])
-    for d, folders, files in os.walk(datadir)]
 
 
 setup(name='EASE',
@@ -16,5 +10,6 @@ setup(name='EASE',
       author_email='taiyupan@uw.edu',
       url='https://github.com/danielfather7/EASE-Project',
       packages=['EASE'],
-      data_files=datafiles,
-    )
+      package_data={'': ['*.csv']},
+)
+
