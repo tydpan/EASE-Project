@@ -7,7 +7,7 @@
 Background and Objective
 ------------------------
 
-Electricity is a globally consumed energy source, such that electricity generation based on conventional energy sources (Petroleum, Coal, and Natrual Gas) are accompanied with large amount of grean house gas emission, particularly the carbon dioxide gas. The figure below mapped out the electricity generation plant with different types of energy sources within the United States in year 2015.
+Electricity is a globally consumed energy source, such that electricity generation based on conventional energy sources (Petroleum, Coal, and Natrual Gas) are accompanied with large amount of greanhouse gas emission, particularly the carbon dioxide gas. The figure below mapped out the electricity generation plant with different types of energy sources within the United States in year 2015.
 
 <img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/Background_2015_EDM.png" alt="...">
 
