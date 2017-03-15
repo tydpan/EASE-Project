@@ -73,7 +73,8 @@ class TEST_avg_capacity(unittest.TestCase):
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'average_plant_capacity.csv')
         average_plant_capacity = pd.read_csv(path)
-        test = pd.read_csv('../Arranged_Data/test_dataset.csv')
+        path_test = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
+        test = pd.read_csv(path_test)
         prec = test.iloc[0, 1]
         ts = test.iloc[0, 2]
         tw = test.iloc[0, 3]
@@ -98,6 +99,7 @@ class TEST_possible_type(unittest.TestCase):
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'average_plant_capacity.csv')
         average_plant_capacity = pd.read_csv(path)
+        path = os.path.dirname(__file__)
         path_test = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
         test = pd.read_csv(path_test)
         prec = test.iloc[0, 1]
@@ -153,6 +155,7 @@ class TEST_rev_plot(unittest.TestCase):
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'Cost', 'Sale_CO2_tax.csv')
         esales = pd.read_csv(path, skiprows=1, names=['Year', 'Sale', 'CO2_tax'])
+        path = os.path.dirname(__file__)
         path_test = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
         test = pd.read_csv(path_test)
         prec = test.iloc[0, 1]
@@ -185,6 +188,7 @@ class TEST_avg_cost(unittest.TestCase):
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'Cost', 'df_cost.csv')
         cost = pd.read_csv(path)
+        path = os.path.dirname(__file__)
         path_test = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
         test = pd.read_csv(path_test)
         prec = test.iloc[0, 1]
