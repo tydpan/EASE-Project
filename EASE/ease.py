@@ -1,6 +1,14 @@
 #!/usr/bin/pythons
 # -*- coding: utf-8 -*-
 
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+import itertools as it
+import warnings
+import numpy as np
+from scipy import stats
+import matplotlib.pyplot as plt
+
 
 def rf(prec, ts, tw, ws):
     """
@@ -13,11 +21,6 @@ def rf(prec, ts, tw, ws):
        vote  = dictionary based output that contains the RF classified states,
                and each states frequency.
     """
-    import pandas as pd
-    from sklearn.ensemble import RandomForestClassifier
-    import itertools as it
-    import warnings
-
     train = pd.read_csv('../Arranged_Data/final_weater.csv')[[
             'State', 'TotalMonthlyPrecip', 'TempSummer',
             'TempWinter', 'Avgwindspeed']]
@@ -55,8 +58,6 @@ def avg_capacity(vote):
     capacity per plant in each state based on our
     RandomForest classifier's result.
     """
-    import pandas as pd
-
     average_plant_capacity = pd.read_csv(
             '../Arranged_Data/average_plant_capacity.csv')
     coal_sum = 0
@@ -87,10 +88,6 @@ def possible_type(avg_cap_list):
     p value calculation, comparing to USA average and
     significance level (alpha) = 0.05.
     """
-    import pandas as pd
-    import numpy as np
-    from scipy import stats
-
     cap_pop = pd.read_csv('../Arranged_Data/average_plant_capacity.csv')
     e_type = ['Coal', 'NG', 'Petro', 'Hydro', 'Solar', 'Wind']
     possible_type_list = []
@@ -133,8 +130,6 @@ def rf_fluctuation(prec, ts, tw, ws):
         select key which has maximum wt% and append key and its value to seperate null list
     return max wt%, std, keys
     """
-    import numpy as np
-
     max_keys = []
     max_values = []
     for i in range(10):
@@ -153,10 +148,6 @@ def rev_plot(avg_cost, capacity, e_type, label, avg_cost_conv=0, capacity_conv=0
     elseif total revenue equals conventional revenue + clean revenue
     return plot
     """
-    import pandas as pd
-    import matplotlib.pyplot as plt
-    import numpy as np
-
     revenue = 0
     esales = pd.read_csv('../Arranged_Data/Cost/Sale_CO2_tax.csv', skiprows=1, names=['Year', 'Sale', 'CO2_tax'])
     if e_type == 'conventional':
@@ -184,8 +175,6 @@ def avg_cost(vote):
     creat a dictionary to store average cost for each type of resource
     return average cost dictionary
     """
-    import pandas as pd
-
     cost = pd.read_csv('../Arranged_Data/Cost/df_cost.csv')
     coal_sum = 0
     ng_sum = 0
@@ -252,8 +241,6 @@ def autolabel(rects):
     """
     Attach a text label above each bar displaying its values, or heights
     """
-    import matplotlib.pyplot as plt
-
     for rect in rects:
         height = rect.get_height()
         plt.text(rect.get_x() + rect.get_width()/2., 1*height, '%d' % int(height), ha='center', va='bottom')
@@ -270,8 +257,6 @@ def suggest(prec, ts, tw, ws, capacity):
         clean revenue, and total revenue
     return clean revenue, conventional revenue, total revenue
     """
-    import matplotlib.pyplot as plt
-
     source_co2 = {'Coal': 2133, 'Petro': 1700, 'NG': 1220}
     state_vote = rf(prec, ts, tw, ws)
     cap = avg_capacity(state_vote)
@@ -295,20 +280,18 @@ def suggest(prec, ts, tw, ws, capacity):
             result = plt.figure(1, figsize=(12, 5))
             plt.subplot(121)
             revenue_clean = rev_plot(cost[clean[2]], clean[1], 'clean',
-                                     '%s (capacity = %d Mwh)' %  (clean[2], int(clean[1])))
+                                     '%s (capacity = %d Mwh)' % (clean[2], int(clean[1])))
             revenue_conv = rev_plot(cost[conventional[2]], (capacity - clean[1]), 'conventional',
-                                    '%s (capacity = %d Mwh)' %  (conventional[2], int(capacity - clean[1])))
+                                    '%s (capacity = %d Mwh)' % (conventional[2], int(capacity - clean[1])))
             revenue_total = rev_plot(cost[clean[2]], clean[1], 'total', 'Total (capacity = %d Mwh)' % capacity,
                                      avg_cost_conv=cost[conventional[2]], capacity_conv=(capacity - clean[1]))
             revenue_total.title('Money Save using %s Combined with %s' % (clean[2], conventional[2]))
             for k in conventional:
                 if k in source_co2:
                     conversion_to_co2 = source_co2[k]
-#            print('Emitted Co2 using', conventional[2], 'is:',
-#                  int(capacity - clean[1]) * conversion_to_co2 * 0.000453592, 'metric tons')
             co2_year = [2016, 2050]
             co2_emission = [capacity * conversion_to_co2 * 0.000453592,
-                                  (capacity - clean[1]) * conversion_to_co2 * 0.000453592]
+                            (capacity - clean[1]) * conversion_to_co2 * 0.000453592]
             plt.subplot(122)
             co2_plot = plt.bar(co2_year, co2_emission, width=12, color='#6495ED', edgecolor='k', linewidth=1.5)
             plt.xticks(co2_year, ('Pure Conventional', 'Conventional + Clean'))
