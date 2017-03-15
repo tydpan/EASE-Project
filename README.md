@@ -2,7 +2,7 @@
 **EASE-Project_v1.0**
 ====================
 
-</p><a href="https://travis-ci.org/danielfather7/EASE-Project"><img src="https://travis-ci.org/danielfather7/EASE-Project.svg?branch=master" border="0">]</a></p>
+</p><a href="https://travis-ci.org/danielfather7/EASE-Project"><img src="https://travis-ci.org/danielfather7/EASE-Project.svg?branch=master" border="0"></a></p>
 
 ------------------------
 Background and Objective
