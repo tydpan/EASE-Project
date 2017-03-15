@@ -1,4 +1,5 @@
 from distutils.core import setup
+import os
 
 
 datadir = os.path.join('share','data')
