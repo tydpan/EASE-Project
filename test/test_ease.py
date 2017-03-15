@@ -73,6 +73,7 @@ class TEST_avg_capacity(unittest.TestCase):
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'average_plant_capacity.csv')
         average_plant_capacity = pd.read_csv(path)
+        path = os.path.dirname(__file__)
         path_test = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
         test = pd.read_csv(path_test)
         prec = test.iloc[0, 1]
