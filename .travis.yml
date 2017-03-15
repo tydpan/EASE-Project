@@ -13,7 +13,7 @@ install:
 
 # command to run tests
 script:
-  - "nosetests"
+  - "coverage run -m unittest discover"
 
 notifications:
   email: false
