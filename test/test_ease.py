@@ -10,6 +10,8 @@ import os
 
 class TEST_RF(unittest.TestCase):
     def test_rf_inputtrain(self):
+        """This function is to test rf classification model used in EASE.py, tests import filed location, test if imported data
+        set includes DC state, and test if dataframe contains null or other non-integrers."""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'final_weater.csv')
         train = pd.read_csv(path)[[
@@ -21,6 +23,8 @@ class TEST_RF(unittest.TestCase):
         self.assertEqual(train.isnull().sum().sum(), 0)
 
     def test_rf_inputpara(self):
+        """This function is to test rf classification parameter sets, the first four values on the training dataset is
+        passed in as parameters, each value is tested with their types. The input limit is also tested."""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
         test = pd.read_csv(path)
@@ -43,6 +47,8 @@ class TEST_RF(unittest.TestCase):
         self.assertGreater(ws, 0)
 
     def test_rf_output(self):
+        """test rf classification output, import first four numbers of the training set as testing values, test if output 
+        is dictionary based."""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
         test = pd.read_csv(path)
@@ -61,6 +67,7 @@ class TEST_RF(unittest.TestCase):
 
 class TEST_avg_capacity(unittest.TestCase):
     def test_avg_cap_input(self):
+        """Test avg_cap function dataframe contains null or other non-integer values""""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'average_plant_capacity.csv')
         average_plant_capacity = pd.read_csv(path)
@@ -68,6 +75,7 @@ class TEST_avg_capacity(unittest.TestCase):
         self.assertEqual(average_plant_capacity.isnull().sum().sum(), 0)
 
     def test_avg_cap_output(self):
+        """test avg_cap function type, and also the length fo the final output contains a length of 6."""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'average_plant_capacity.csv')
         average_plant_capacity = pd.read_csv(path)
@@ -88,6 +96,7 @@ class TEST_avg_capacity(unittest.TestCase):
 
 class TEST_possible_type(unittest.TestCase):
     def test_possible_type_input(self):
+        """test possible_type function if dataframe contains the null or other non-integer values."""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'average_plant_capacity.csv')
         cap_pop = pd.read_csv(path)
@@ -95,6 +104,10 @@ class TEST_possible_type(unittest.TestCase):
         self.assertEqual(cap_pop.isnull().sum().sum(), 0)
 
     def test_possible_type_output(self):
+        """test possible_type function, first passed in the first 4 values of the training dataset, output type is tested
+        to ensure is a list.
+        
+        Also test if the correct source is enlisted into the right bucket, as well as the final output list length."""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'average_plant_capacity.csv')
         average_plant_capacity = pd.read_csv(path)
@@ -131,6 +144,8 @@ class TEST_possible_type(unittest.TestCase):
 
 class TEST_rf_fluctuation(unittest.TestCase):
     def test_rf_fluctuation_output(self):
+        """tets the rf_fluctuation function to see if output is a list, contains 3 things in the list, and if the std is less
+        than 0.01."""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
         test = pd.read_csv(path)
@@ -151,6 +166,8 @@ class TEST_rf_fluctuation(unittest.TestCase):
 
 class TEST_rev_plot(unittest.TestCase):
     def test_rev_plot_input(self):
+        """Test rev_plot function, if the dataframe contains null or other non-integer values, test capacity number is either
+        a float or an integer, test label is a string."""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'Cost', 'Sale_CO2_tax.csv')
         esales = pd.read_csv(path, skiprows=1, names=['Year', 'Sale', 'CO2_tax'])
@@ -177,6 +194,7 @@ class TEST_rev_plot(unittest.TestCase):
 
 class TEST_avg_cost(unittest.TestCase):
     def test_avg_cost_input(self):
+        """test avg_cost function, if the dataframe contains null or other non-integer values."""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'Cost', 'df_cost.csv')
         cost = pd.read_csv(path)
@@ -184,6 +202,8 @@ class TEST_avg_cost(unittest.TestCase):
         self.assertEqual(cost.isnull().sum().sum(), 0)
 
     def test_avg_cost_output(self):
+        """Test avg_cost function, such that the output utilized a dictionary based result (vote) from rf classification,
+        test the output is also a dictionary-based output, and that the final length is 6."""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'Cost', 'df_cost.csv')
         cost = pd.read_csv(path)
@@ -204,6 +224,8 @@ class TEST_avg_cost(unittest.TestCase):
 
 class TEST_clean_or_conv(unittest.TestCase):
     def test_clean_or_conv(self):
+        """test clean_or_conv function, such that the input is alist, output is a list, and the second index [2] from the clean 
+        list is a string."""
         path = os.path.dirname(__file__)
         path_test = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
         test = pd.read_csv(path_test)
@@ -228,6 +250,8 @@ class TEST_clean_or_conv(unittest.TestCase):
 
 class TEST_sort_and_pick(unittest.TestCase):
     def test_sort_and_pick_output(self):
+        """test sort and pick function to see if outputs are lists, and that the last value of the list is not conv or clean 
+        in the wrong bucket, test the length of the lists."""
         path = os.path.dirname(__file__)
         path_test = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
         test = pd.read_csv(path_test)
@@ -255,6 +279,7 @@ class TEST_sort_and_pick(unittest.TestCase):
 
 class TEST_suggest(unittest.TestCase):
     def test_suggest_output(self):
+        """test suggest function, to see if all works as expected."""
         path = os.path.dirname(__file__)
         path_test = os.path.join(path, 'Arranged_Data', 'test_dataset.csv')
         test = pd.read_csv(path_test)
