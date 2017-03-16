@@ -67,7 +67,7 @@ class TEST_RF(unittest.TestCase):
 
 class TEST_avg_capacity(unittest.TestCase):
     def test_avg_cap_input(self):
-        """Test avg_cap function dataframe contains null or other non-integer values""""
+        """Test avg_cap function dataframe contains null or other non-integer values"""
         path = os.path.dirname(__file__)
         path = os.path.join(path, 'Arranged_Data', 'average_plant_capacity.csv')
         average_plant_capacity = pd.read_csv(path)
