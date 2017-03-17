@@ -100,6 +100,18 @@ Step 7: Open our package, type</p>
     `$ python3 EASE_GUI.py`</p>
 Enjoy!
 
+-------------
+GUI Example
+------------
+Step 1: GUI license page:
+<img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/GUI_license_page.png" alt="...">
+
+Step 2: GUI prompts user input values:
+<img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/GUI_user_input.png" alt="...">
+
+Step3: GUI output suggestion model:
+<img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/GUI_output.png" alt="...">
+
 ---------
 Folders
 ---------
